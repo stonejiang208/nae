@@ -1,0 +1,16 @@
+ac-comphist.dat
+auto-save-list
+bookmarks
+custom.el
+projectile-bookmarks.eld
+
+init-gnus.el
+init-ido.el
+
+.DS_Store
+.emacs.desktop
+.emacs.desktop.lock
+.session
+
+backup/*
+elpa/*
