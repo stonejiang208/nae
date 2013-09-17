@@ -1,8 +1,8 @@
-(require-package 'org nil t)
+(require-package 'org '(20130916))
 
 (add-to-list 'auto-mode-alist '("\\.txt\\'" . org-mode))
 
-(require-package 'ox-publish)
+(require 'ox-publish)
 
 (setq org-html-postamble-format (quote (("cn" "<p class=\"author\">作者： %a</p>
 <p class=\"date\">日期： %d</p>"))))

@@ -28,10 +28,11 @@
 
 (require 'init-c)
 (require 'init-php)
-;; (require 'init-org)
+(require 'init-org)
 (require 'init-slime)
 
 (require 'init-gnus)
+(require 'init-w3m)
 
 (require 'init-misc)
 
