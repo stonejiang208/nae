@@ -5,7 +5,6 @@ custom.el
 projectile-bookmarks.eld
 
 init-gnus.el
-init-org.el
 
 .DS_Store
 .emacs.desktop
@@ -14,3 +13,4 @@ init-org.el
 
 backup/*
 elpa/*
+url/*
