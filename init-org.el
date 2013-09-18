@@ -1,4 +1,5 @@
 (require-package 'org '(20130916))
+(require-package 'htmlize)
 
 (add-to-list 'auto-mode-alist '("\\.txt\\'" . org-mode))
 
@@ -7,6 +8,7 @@
 (setq org-html-postamble-format (quote (("zh-CN" "<p class=\"license\">本文采用 <a rel=\"license\" href=\"http://creativecommons.org/licenses/by-sa/3.0/cn/\">知识共享署名-相同方式共享 3.0 中国大陆许可协议</a> 进行许可</p><p class=\"date\">%d</p>"))))
 (setq org-html-preamble nil)
 (setq org-html-postamble nil)
+(setq org-src-fontify-natively t)
 
 
 ;; 生成的html不附上xml声明
@@ -25,6 +27,7 @@
          :sitemap-file-entry-format "%t"
          :publishing-directory "~/Dropbox/blog/html/"
          :publishing-function org-html-publish-to-html
+         :htmlized-source t
          :recursive t
          :headline-levels 4
          :auto-sitemap t

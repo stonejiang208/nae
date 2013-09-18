@@ -43,7 +43,6 @@
 ;; 回车自动缩进
 (define-key global-map (kbd "RET") 'newline-and-indent)
 
-;; 删除行末空格
-(setq-default show-trailing-whitespace t)
+;; (setq-default show-trailing-whitespace t)
 
 (provide 'init-editing-utils)
