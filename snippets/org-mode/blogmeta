@@ -1,0 +1,6 @@
+#name : blogmeta
+# --
+#+SETUPFILE: ~/.emacs.d/org-templates/blog.org
+#+TITLE: ${1:title}
+#+DATE: ${2:date}
+$0

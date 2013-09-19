@@ -1,0 +1,5 @@
+#name : php source code with line number
+# --
+#+BEGIN_SRC php -n
+$0
+#+END_SRC
