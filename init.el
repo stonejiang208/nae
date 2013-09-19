@@ -11,6 +11,8 @@
 (require 'init-key-bindings)
 (require 'init-gui-frames)
 
+(require 'init-tramp)
+
 (require 'init-dirtree)
 (require 'init-dired)
 (require 'init-ibuffer)
@@ -36,6 +38,11 @@
 (require 'init-w3m)
 
 (require 'init-misc)
+
+;; 开启server
+(require 'server)
+(unless (server-running-p)
+  (server-start))
 
 ;; Customize Emacs所自动生成的配置
 (setq custom-file "~/.emacs.d/custom.el")
