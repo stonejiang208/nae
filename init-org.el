@@ -9,6 +9,7 @@
 (setq org-html-preamble nil)
 (setq org-html-postamble nil)
 (setq org-src-fontify-natively t)
+(setq org-publish-sitemap-sort-files 'anti-chronologically)
 
 
 ;; 生成的html不附上xml声明
@@ -23,7 +24,6 @@
          :base-extension "org"
          :sitemap-filename "sitemap.org"
          :sitemap-title "Sitemap"
-         :sitemap-sort-files "anti-chronologically"
          :sitemap-file-entry-format "%t"
          :publishing-directory "~/Dropbox/blog/html/"
          :publishing-function org-html-publish-to-html

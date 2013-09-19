@@ -1,9 +1,8 @@
 (setq visible-bell t)
 
 (global-linum-mode t)
-
 (column-number-mode t)
-
+(global-visual-line-mode 1)
 (setq-default indent-tabs-mode nil)
 
 ;; 显示括号匹配, 而不是匹配后短暂的跳到另一个括号
