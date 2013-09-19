@@ -6,9 +6,8 @@
 
 (require 'init-utils)
 (require 'init-elpa)
-
 (require 'init-themes)
-(require 'init-key-bindings)
+
 (require 'init-gui-frames)
 
 (require 'init-tramp)
@@ -38,6 +37,8 @@
 (require 'init-w3m)
 
 (require 'init-misc)
+
+(require 'init-key-bindings)
 
 ;; 开启server
 (require 'server)

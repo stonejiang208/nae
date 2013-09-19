@@ -39,6 +39,16 @@
 
 (setq backup-directory-alist '(("" . "~/.emacs.d/emacs-backup")))
 
+;; 不备份使用su或者sudo命令打开的文件，因此通过Tramp打开的文件不会被备份
+;; 养成良好的习惯，进行重要文件操作前，手动备份
+(setq backup-enable-predicate
+      (lambda (name)
+        (and (normal-backup-enable-predicate name)
+             (not
+              (let ((method (file-remote-p name 'method)))
+                (when (stringp method)
+                  (member method '("su" "sudo"))))))))
+
 ;; 回车自动缩进
 (define-key global-map (kbd "RET") 'newline-and-indent)
 
