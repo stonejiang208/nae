@@ -52,3 +52,11 @@ BUFFER may be either a buffer or its name (a string)."
         (rename-buffer new-name)
         (set-visited-file-name new-name)
         (set-buffer-modified-p nil)))))
+
+;; 清楚shell所有output
+(defun clear-shell ()
+  (interactive)
+  (let ((old-max comint-buffer-maximum-size))
+    (setq comint-buffer-maximum-size 0)
+    (comint-truncate-buffer)
+    (setq comint-buffer-maximum-size old-max)))
