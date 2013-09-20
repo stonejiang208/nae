@@ -12,7 +12,6 @@
 
 (require 'init-tramp)
 
-(require 'init-dirtree)
 (require 'init-dired)
 (require 'init-ibuffer)
 (require 'init-projectile)
