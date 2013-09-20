@@ -16,3 +16,4 @@ init-gnus.el
 backup/*
 elpa/*
 url/*
+DouBanMusic/*
