@@ -44,6 +44,7 @@
 
 (require 'init-key-bindings)
 
+(require 'init-local)
 (require 'init-hack)
 
 ;; 开启server

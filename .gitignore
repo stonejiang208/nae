@@ -5,6 +5,7 @@ tramp
 custom.el
 projectile-bookmarks.eld
 
+init-local.el
 init-gnus.el
 
 .DS_Store
