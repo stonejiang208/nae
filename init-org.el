@@ -33,13 +33,13 @@
          :auto-sitemap t
          :html-link-up "/sitemap.html"
          :html-link-home "/"
-         :html-head "<link rel=\"stylesheet\" type=\"text/css\" href=\"/style.css\" />"
+         :html-head "<meta http-equiv=\"pragma\" content=\"no-cache\" />\n<link rel=\"stylesheet\" type=\"text/css\" href=\"/style.css\" />"
          :html-head-include-default-style nil
          :html-head-include-scripts nil
          )
         ("static"
          :base-directory "~/Dropbox/blog/org/"
-         :base-extension "css\\|js\\|png\\|jpg\\|gif\\|pdf\\|mp3\\|ogg\\|swf\\|html"
+         :base-extension "css\\|js\\|png\\|jpg\\|gif\\|ico\\|pdf\\|mp3\\|ogg\\|swf\\|html"
          :publishing-directory "~/Dropbox/blog/html/"
          :recursive t
          :publishing-function org-publish-attachment
