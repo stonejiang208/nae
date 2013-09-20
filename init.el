@@ -1,5 +1,5 @@
 (add-to-list 'load-path user-emacs-directory)
-(add-to-list 'load-path (expand-file-name "local/" user-emacs-directory))
+;; (add-to-list 'load-path (expand-file-name "local/" user-emacs-directory))
 
 (setq exec-path (append exec-path '("/usr/local/bin/")))
 
