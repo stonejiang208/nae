@@ -34,6 +34,7 @@
 (require 'init-org)
 (require 'init-slime)
 (require 'init-emmet)
+(require 'init-multi-web-mode)
 
 (require 'init-gnus)
 (require 'init-w3m)
