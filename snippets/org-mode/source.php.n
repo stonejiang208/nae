@@ -1,4 +1,5 @@
 #name : php source code with line number
+#key : source
 # --
 #+BEGIN_SRC php -n
 $0
