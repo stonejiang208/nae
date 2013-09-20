@@ -1,5 +1,5 @@
-;; (setq desktop-path (list user-emacs-directory))
-;; (desktop-save-mode 1)
+(setq desktop-path (list user-emacs-directory))
+(desktop-save-mode 1)
 
 (require-package 'session)
 

@@ -38,7 +38,6 @@
 
 (require 'init-gnus)
 (require 'init-w3m)
-(require 'init-youdao)
 
 (require 'init-misc)
 
