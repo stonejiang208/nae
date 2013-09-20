@@ -18,6 +18,7 @@
 (require 'init-projectile)
 (require 'init-flycheck)
 (require 'init-auto-complete)
+(require 'init-helm)
 (require 'init-yasnippet)
 
 (require 'init-ido)
@@ -32,6 +33,7 @@
 (require 'init-php)
 (require 'init-org)
 (require 'init-slime)
+(require 'init-emmet)
 
 (require 'init-gnus)
 (require 'init-w3m)
