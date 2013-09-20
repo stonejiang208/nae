@@ -38,6 +38,7 @@
 
 (require 'init-gnus)
 (require 'init-w3m)
+(require 'init-douban-fm)
 
 (require 'init-misc)
 
