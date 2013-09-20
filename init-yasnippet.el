@@ -6,6 +6,10 @@
 ;; 设置snippets存放的目录
 (setq yas-snippet-dirs '("~/.emacs.d/snippets"))
 
+;; 加载yasnippet后刷新下缓存，不然会加载elpa里面的snippets
+(after-load 'yasnippet
+  (yas-reload-all))
+
 ;; 缩进至当前列
 (setq yas-indent-line 'fixed)
 
