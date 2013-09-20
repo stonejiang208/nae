@@ -16,6 +16,7 @@
 (require 'init-ibuffer)
 (require 'init-projectile)
 (require 'init-flycheck)
+;; (require 'init-flyspell)
 (require 'init-auto-complete)
 (require 'init-helm)
 (require 'init-yasnippet)
@@ -41,6 +42,8 @@
 (require 'init-misc)
 
 (require 'init-key-bindings)
+
+(require 'init-hack)
 
 ;; 开启server
 (require 'server)

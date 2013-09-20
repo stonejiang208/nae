@@ -7,4 +7,6 @@
 (global-set-key (kbd "C-x o") 'switch-window)
 (global-set-key (kbd "M-.") 'helm-etags-select)
 
+(define-key ctl-x-4-map "t" 'toggle-window-split)
+
 (provide 'init-key-bindings)
