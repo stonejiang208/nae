@@ -22,6 +22,7 @@
 (require 'init-yasnippet)
 
 (require 'init-ido)
+(require 'init-bookmark)
 (require 'init-hippie-expand)
 (require 'init-windows)
 (require 'init-sessions)
