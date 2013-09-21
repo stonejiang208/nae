@@ -34,4 +34,14 @@
       (select-window first-win)
       (if this-win-2nd (other-window 1))))))
 
+(defun split-window-below-and-focus ()
+  (interactive)
+  (split-window-vertically)
+  (other-window 1))
+
+(defun split-window-right-and-focus ()
+  (interactive)
+  (split-window-horizontally)
+  (other-window 1))
+
 (provide 'init-windows)
