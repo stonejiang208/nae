@@ -53,6 +53,21 @@ BUFFER may be either a buffer or its name (a string)."
         (set-visited-file-name new-name)
         (set-buffer-modified-p nil)))))
 
+;; 切换至*scratch*，如果*scratch*不存在，新建之
+;; http://stackoverflow.com/questions/234963/re-open-scratch-buffer-in-emacs
+(defun switch-buffer-scratch ()
+  "Switch to the scratch buffer. If the buffer doesn't exist,
+create it and write the initial message into it."
+  (interactive)
+  (let* ((scratch-buffer-name "*scratch*")
+         (scratch-buffer (get-buffer scratch-buffer-name)))
+    (unless scratch-buffer
+      (setq scratch-buffer (get-buffer-create scratch-buffer-name))
+      (with-current-buffer scratch-buffer
+        (lisp-interaction-mode)
+        (insert initial-scratch-message)))
+    (switch-to-buffer scratch-buffer)))
+
 ;; 清楚shell所有output
 (defun clear-shell ()
   (interactive)
