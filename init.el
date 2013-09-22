@@ -14,6 +14,7 @@
 
 (require 'init-dired)
 (require 'init-ibuffer)
+(require 'init-isearch)
 (require 'init-projectile)
 (require 'init-flycheck)
 ;; (require 'init-flyspell)
