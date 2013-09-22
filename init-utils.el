@@ -67,11 +67,3 @@ create it and write the initial message into it."
         (lisp-interaction-mode)
         (insert initial-scratch-message)))
     (switch-to-buffer scratch-buffer)))
-
-;; 清楚shell所有output
-(defun clear-shell ()
-  (interactive)
-  (let ((old-max comint-buffer-maximum-size))
-    (setq comint-buffer-maximum-size 0)
-    (comint-truncate-buffer)
-    (setq comint-buffer-maximum-size old-max)))

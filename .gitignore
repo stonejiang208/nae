@@ -15,5 +15,6 @@ init-gnus.el
 
 backup/*
 elpa/*
+eshell/*
 url/*
 DouBanMusic/*

@@ -38,6 +38,7 @@
 (require 'init-multi-web-mode)
 (require 'init-vimrc-mode)
 
+(require 'init-shell)
 (require 'init-gnus)
 (require 'init-w3m)
 (require 'init-douban-fm)
