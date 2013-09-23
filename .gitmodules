@@ -1,0 +1,3 @@
+[submodule "php-manual"]
+	path = php-manual
+	url = git@github.com:dongxiong/php-manual.git
