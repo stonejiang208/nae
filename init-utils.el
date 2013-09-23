@@ -67,3 +67,15 @@ create it and write the initial message into it."
         (lisp-interaction-mode)
         (insert initial-scratch-message)))
     (switch-to-buffer scratch-buffer)))
+
+;; 模仿vim的f
+(defun jump-to-char (n char)
+  "Move forward to Nth occurence of CHAR.
+Typing `jump-to-char-key' again will move forwad to the next Nth
+occurence of CHAR."
+  (interactive "p\ncGo to char: ")
+  (search-forward (string char) nil nil n)
+  (while (char-equal (read-char)
+		     char)
+    (search-forward (string char) nil nil n))
+  (setq unread-command-events (list last-input-event)))

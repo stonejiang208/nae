@@ -1,5 +1,7 @@
 (setq mac-command-modifier 'meta)
 
+(global-set-key (kbd "C-c f") 'jump-to-char)
+
 (global-set-key (kbd "C-c g") 'magit-status)
 (global-set-key (kbd "C-c h") 'helm-mini)
 (global-set-key (kbd "M-x") 'smex)
