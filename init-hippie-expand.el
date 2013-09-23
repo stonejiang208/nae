@@ -1,6 +1,3 @@
-;; 自动补全
-; (global-set-key (kbd "") 'hippie-expand)
-
 ;; 补全顺序
 (setq hippie-expand-try-functions-list
       '(try-complete-file-name-partially
