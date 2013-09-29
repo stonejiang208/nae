@@ -18,6 +18,7 @@
 (require 'init-projectile)
 (require 'init-flycheck)
 ;; (require 'init-flyspell)
+(require 'init-compile)
 (require 'init-auto-complete)
 (require 'init-helm)
 (require 'init-yasnippet)
