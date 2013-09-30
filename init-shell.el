@@ -2,6 +2,9 @@
 (require 'bash-completion)
 (bash-completion-setup)
 
+;; 让M-!可以执行.bash_profile中的alias，原来的值是"-c"
+;; (setq shell-command-switch "-ic")
+
 ;; 清楚shell所有output
 (defun clear-shell ()
   (interactive)

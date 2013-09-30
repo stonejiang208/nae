@@ -1,12 +1,10 @@
 (add-to-list 'load-path user-emacs-directory)
 (add-to-list 'load-path (expand-file-name "local/" user-emacs-directory))
 
-(setq exec-path (append exec-path '("/usr/local/bin/")))
-
-
 (require 'init-utils)
 (require 'init-elpa)
 (require 'init-themes)
+(require 'init-exec-path)
 
 (require 'init-gui-frames)
 
