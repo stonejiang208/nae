@@ -55,7 +55,10 @@
 (setq-default show-trailing-whitespace t)
 
 ;; 某些mode不开启show-trailing-whitespace
-(dolist (hook '(calendar-mode-hook))
+(dolist (hook '(calendar-mode-hook
+                completion-list-mode-hook
+                package-menu-mode-hook
+                shell-mode-hook))
   (add-hook hook
             (lambda () (setq show-trailing-whitespace nil))))
 
