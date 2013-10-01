@@ -6,4 +6,6 @@
 (setf youdao-key-from "youdao-key-from")
 (setf youdao-key "youdao-key")
 
+(setq shell-file-name "/bin/bash")
+
 (provide 'init-local)
