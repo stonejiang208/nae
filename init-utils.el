@@ -25,8 +25,6 @@ BUFFER may be either a buffer or its name (a string)."
     (when (interactive-p)
       (error "Cannot kill buffer.  Not a live buffer: `%s'" buffer))))
 
-(provide 'init-utils)
-
 ;; 删除当前文件及buffer
 (defun delete-this-file ()
   "Delete the current file, and kill the buffer."
@@ -79,3 +77,5 @@ occurence of CHAR."
 		     char)
     (search-forward (string char) nil nil n))
   (setq unread-command-events (list last-input-event)))
+
+(provide 'init-utils)
