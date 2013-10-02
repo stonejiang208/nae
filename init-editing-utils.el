@@ -49,9 +49,6 @@
                 (when (stringp method)
                   (member method '("su" "sudo"))))))))
 
-;; 回车自动缩进
-(define-key global-map (kbd "RET") 'newline-and-indent)
-
 (setq-default show-trailing-whitespace t)
 
 ;; 某些mode不开启show-trailing-whitespace
