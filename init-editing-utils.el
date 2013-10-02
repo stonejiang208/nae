@@ -55,6 +55,8 @@
 (dolist (hook '(calendar-mode-hook
                 comint-mode-hook
                 completion-list-mode-hook
+                elfeed-show-mode-hook
+                elfeed-search-mode-hook
                 package-menu-mode-hook
                 shell-mode-hook
                 term-mode-hook))
