@@ -32,12 +32,13 @@
 
 (require 'init-editing-utils)
 
+;; (require 'init-mmm)
+(require 'init-web-mode)
 (require 'init-c)
 (require 'init-php)
 (require 'init-org)
 (require 'init-slime)
 (require 'init-emmet)
-;; (require 'init-multi-web-mode)
 (require 'init-vimrc-mode)
 
 (require 'init-shell)
