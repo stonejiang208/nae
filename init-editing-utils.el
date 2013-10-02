@@ -56,6 +56,7 @@
 
 ;; 某些mode不开启show-trailing-whitespace
 (dolist (hook '(calendar-mode-hook
+                comint-mode-hook
                 completion-list-mode-hook
                 package-menu-mode-hook
                 shell-mode-hook
