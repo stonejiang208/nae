@@ -3,10 +3,6 @@
 (custom-set-faces
  '(linum ((t (:inherit (shadow default) :background "#042028")))))
 
-;; 加载yasnippet后刷新下缓存，不然会加载elpa里面的snippets
-(after-load 'yasnippet
-  (yas-reload-all))
-
 ;; 设置auto-complete的dict在原来的基础上加上auto-complete-dict
 ;; 其中存有一份dict/javascript-mode的拷贝，命名为js-mode
 ;; 解决auto-complete在js文件下无效

@@ -1,10 +1,10 @@
 (require-package 'popup)
 (require-package 'yasnippet)
 
-(yas-global-mode 1)
-
 ;; 设置snippets存放的目录
 (setq yas-snippet-dirs '("~/.emacs.d/snippets"))
+;; 位于setq yas-snippet-dirs之后，避免加载elpa里面的snippets
+(yas-global-mode 1)
 
 ;; 缩进至当前列
 (setq yas-indent-line 'fixed)
