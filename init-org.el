@@ -3,6 +3,26 @@
 
 (add-to-list 'auto-mode-alist '("\\.txt\\'" . org-mode))
 
+;; 记录TODO完成的时间
+(setq org-log-done 'time)
+
+;; 在所有子项目完成后才能设定TODO项目为完成
+(setq org-enforce-todo-dependencies t)
+
+(defun org-summary-todo (n-done n-not-done)
+  "Switch entry to DONE when all subentries are done, to TODO otherwise."
+  (let (org-log-done org-log-states)   ; turn off logging
+    (org-todo (if (= n-not-done 0) "DONE" "TODO"))))
+
+;; 所有子项目完成后自动设定TODO项目为完成
+(add-hook 'org-after-todo-statistics-hook 'org-summary-todo)
+
+;; 在当前window显示agenda
+(setq org-agenda-window-setup 'current-window)
+
+;; 在agenda view中显示日历中的节日
+(setq org-agenda-include-diary t)
+
 (require 'ox-publish)
 
 (setq org-html-postamble-format (quote (("zh-CN" "<p class=\"license\">本文采用 <a rel=\"license\" href=\"http://creativecommons.org/licenses/by-sa/3.0/cn/\">知识共享署名-相同方式共享 3.0 中国大陆许可协议</a> 进行许可</p><p class=\"date\">%d</p>"))))
