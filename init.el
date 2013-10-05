@@ -3,8 +3,6 @@
 (add-to-list 'load-path user-emacs-directory)
 (add-to-list 'load-path (expand-file-name "local/" user-emacs-directory))
 
-(setenv "LANG" "zh_CN.UTF-8")
-
 (require 'init-utils)
 (require 'init-elpa)
 (require 'init-themes)
