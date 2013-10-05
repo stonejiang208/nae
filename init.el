@@ -48,6 +48,7 @@
 (require 'init-w3m)
 (require 'init-rss)
 (require 'init-douban-fm)
+(require 'init-calendar)
 
 (require 'init-misc)
 
@@ -55,6 +56,8 @@
 
 (require 'init-local)
 (require 'init-hack)
+
+(require 'init-locales)
 
 ;; 开启server
 (require 'server)
