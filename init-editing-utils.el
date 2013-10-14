@@ -37,8 +37,6 @@
 
 (setq make-backup-file-name-function 'my-backup-file-name)
 
-(setq backup-directory-alist '(("" . "~/.emacs.d/emacs-backup")))
-
 ;; 不备份使用su或者sudo命令打开的文件，因此通过Tramp打开的文件不会被备份
 ;; 养成良好的习惯，进行重要文件操作前，手动备份
 (setq backup-enable-predicate
