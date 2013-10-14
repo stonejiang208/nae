@@ -31,9 +31,7 @@
          (backupFilePath (replace-regexp-in-string "//" "/" (concat backupRootDir filePath "~") ))
          )
     (make-directory (file-name-directory backupFilePath) (file-name-directory backupFilePath))
-    backupFilePath
-    )
-  )
+    backupFilePath))
 
 (setq make-backup-file-name-function 'my-backup-file-name)
 
