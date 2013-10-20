@@ -32,7 +32,6 @@
 
 (require 'init-editing-utils)
 
-;; (require 'init-mmm)
 (require 'init-web-mode)
 (require 'init-c)
 (require 'init-php)
