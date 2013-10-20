@@ -42,7 +42,6 @@
 (require 'init-vimrc-mode)
 
 (require 'init-shell)
-;; (require 'init-gnus)
 (require 'init-w3m)
 (require 'init-rss)
 (require 'init-douban-fm)
