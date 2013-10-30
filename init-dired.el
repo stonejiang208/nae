@@ -8,8 +8,7 @@
             (define-key dired-mode-map (kbd "<return>")
               'dired-find-alternate-file)
             (define-key dired-mode-map (kbd "^")
-              (lambda () (interactive) (find-alternate-file "..")))
-            ))
+              (lambda () (interactive) (find-alternate-file "..")))))
 
 (after-load 'dired
   (require 'dired+))
