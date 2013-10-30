@@ -78,4 +78,47 @@ occurence of CHAR."
     (search-forward (string char) nil nil n))
   (setq unread-command-events (list last-input-event)))
 
+;; 按DEL键的时候删除一个tab或者一个tab宽度的空格
+;; http://stackoverflow.com/questions/1450169/how-do-i-emulate-vims-softtabstop-in-emacs
+(defun backward-delete-whitespace-to-column ()
+  "delete back to the previous column of whitespace, or as much whitespace as possible,
+or just one char if that's not possible"
+  (interactive)
+  (if indent-tabs-mode
+      (call-interactively 'backward-delete-char)
+    (let ((movement (% (current-column) tab-width))
+          (p (point)))
+      (when (= movement 0) (setq movement tab-width))
+      (save-match-data
+        (if (string-match "\\w*\\(\\s-+\\)$" (buffer-substring-no-properties (- p movement) p))
+            (backward-delete-char-untabify (- (match-end 1) (match-beginning 1)))
+        (call-interactively 'backward-delete-char-untabify))))))
+
+(defun my-delete-backward-char (n &optional killflag)
+  (interactive "p\nP")
+  (unless (integerp n)
+    (signal 'wrong-type-argument (list 'integerp n)))
+  (cond ((and (use-region-p)
+          delete-active-region
+          (= n 1))
+     ;; If a region is active, kill or delete it.
+     (if (eq delete-active-region 'kill)
+         (kill-region (region-beginning) (region-end))
+       (delete-region (region-beginning) (region-end))))
+    ;; In Overwrite mode, maybe untabify while deleting
+    ((null (or (null overwrite-mode)
+           (<= n 0)
+           (memq (char-before) '(?\t ?\n))
+           (eobp)
+           (eq (char-after) ?\n)))
+     (let ((ocol (current-column)))
+           (delete-char (- n) killflag)
+       (save-excursion
+         (insert-char ?\s (- ocol (current-column)) nil))))
+    ;; Otherwise, do simple deletion.
+    ;; (t (delete-char (- n) killflag))))
+    ;; 这里没用到killflag标志，后期熟悉elisp后再修改
+    ;; backward-delete-whitespace-to-column使其支持killflag参数
+    (t (backward-delete-whitespace-to-column))))
+
 (provide 'init-utils)

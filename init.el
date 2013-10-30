@@ -47,6 +47,7 @@
 (require 'init-calendar)
 
 (require 'init-misc)
+(require 'init-dir-locals)
 
 (require 'init-key-bindings)
 
