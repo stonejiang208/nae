@@ -4,6 +4,7 @@
 (column-number-mode t)
 (global-visual-line-mode 1)
 (setq-default indent-tabs-mode nil)
+(setq-default tab-width 4)
 
 ;; 显示括号匹配, 而不是匹配后短暂的跳到另一个括号
 (show-paren-mode t)
@@ -58,5 +59,12 @@
                 term-mode-hook))
   (add-hook hook
             (lambda () (setq show-trailing-whitespace nil))))
+
+(dolist (hook '(web-mode-hook
+                php-mode-hook
+                c-mode-hook))
+  (add-hook hook
+            (lambda ()
+              (local-set-key (kbd "<backspace>") 'my-delete-backward-char))))
 
 (provide 'init-editing-utils)
