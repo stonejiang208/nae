@@ -4,7 +4,8 @@
                                                (web-mode-code-indent-offset . 4)
                                                (web-mode-style-padding . 4)
                                                (web-mode-script-padding . 4)
-                                               (indent-tabs-mode . t)))))
+                                               (indent-tabs-mode . t)))
+                                  (php-mode . ((eval . (web-mode))))))
 
 ;; 使改变major mode后directory variables仍能生效
 ;; http://stackoverflow.com/questions/19280851/how-to-keep-dir-local-variables-when-switching-major-modes
