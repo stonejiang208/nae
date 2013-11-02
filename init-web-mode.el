@@ -1,15 +1,15 @@
 (require-package 'web-mode)
 
-(defvar my-web-mode-indentation-width 4
-  "The number of spaces I prefer for line indentation.")
+(defun my-set-web-mode-indentation (indentation)
+  (setq web-mode-markup-indent-offset indentation
+        web-mode-css-indent-offset indentation
+        web-mode-code-indent-offset indentation
+        web-mode-style-padding indentation
+        web-mode-script-padding indentation))
 
-(setq web-mode-markup-indent-offset my-web-mode-indentation-width
-      web-mode-css-indent-offset my-web-mode-indentation-width
-      web-mode-code-indent-offset my-web-mode-indentation-width
-      web-mode-style-padding my-web-mode-indentation-width
-      web-mode-script-padding my-web-mode-indentation-width
-      web-mode-block-padding 0)
+(my-set-web-mode-indentation 2)
 
+(setq web-mode-block-padding 0)
 (setq web-mode-disable-auto-pairing t)
 (setq web-mode-indent-style 2)
 
@@ -35,9 +35,9 @@ spaces."
                       (make-string (% my-web-mode-indentation-width tab-width) ? ))
             (make-string my-web-mode-indentation-width ? ))))
 
-(add-hook 'web-mode-hook
-          (lambda ()
-            (local-set-key (kbd "RET") 'my-web-mode-newline-and-indent)
-            (local-set-key (kbd "TAB") 'my-web-mode-indent)))
+;; (add-hook 'web-mode-hook
+;;           (lambda ()
+;;             (local-set-key (kbd "RET") 'my-web-mode-newline-and-indent)
+;;             (local-set-key (kbd "TAB") 'my-web-mode-indent)))
 
 (provide 'init-web-mode)

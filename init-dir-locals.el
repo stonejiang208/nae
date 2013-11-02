@@ -1,11 +1,9 @@
 (dir-locals-set-class-variables 'wordpress
-                                '((web-mode . ((web-mode-markup-indent-offset . 4)
-                                               (web-mode-css-indent-offset . 4)
-                                               (web-mode-code-indent-offset . 4)
-                                               (web-mode-style-padding . 4)
-                                               (web-mode-script-padding . 4)
-                                               (indent-tabs-mode . t)))
-                                  (php-mode . ((eval . (web-mode))))))
+                                '((web-mode . ((eval . (progn (my-set-web-mode-indentation 4)
+                                                              (setq indent-tabs-mode t)))))
+                                  (php-mode . ((eval . (progn (web-mode)
+                                                              (my-set-web-mode-indentation 4)
+                                                              (setq indent-tabs-mode t)))))))
 
 ;; 使改变major mode后directory variables仍能生效
 ;; http://stackoverflow.com/questions/19280851/how-to-keep-dir-local-variables-when-switching-major-modes
