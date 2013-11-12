@@ -1,7 +1,8 @@
 (require-package 'color-theme-sanityinc-solarized)
+(require-package 'monokai-theme)
 
-;; 默认主题solarized深色
-(setq-default custom-enabled-themes '(sanityinc-solarized-dark))
+;; 默认主题
+(setq-default custom-enabled-themes '(monokai))
 
 ;; 确保主题在没有配置主题的情况下也能启用
 (defun reapply-themes ()
