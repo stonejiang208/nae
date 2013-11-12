@@ -1,8 +1,3 @@
-;; linum的背景色和linum下面的背景色不同
-;; 设置linum的背景色和default的背景色一致
-(custom-set-faces
- '(linum ((t (:inherit (shadow default) :background "#042028")))))
-
 ;; 设置auto-complete的dict在原来的基础上加上auto-complete-dict
 ;; 其中存有一份dict/javascript-mode的拷贝，命名为js-mode
 ;; 解决auto-complete在js文件下无效
