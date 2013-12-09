@@ -1,0 +1,8 @@
+#name : Function Comment
+#key : doc
+# --
+/**
+ * ${1:something...}
+ *
+ * @return ${2:void}
+ */
