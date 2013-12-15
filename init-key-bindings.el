@@ -1,6 +1,7 @@
 (setq mac-command-modifier 'meta)
 (setq mac-option-modifier 'none)
 
+(global-set-key (kbd "C-.") 'set-mark-command)
 (global-set-key (kbd "C-c f") 'jump-to-char)
 
 (global-set-key (kbd "C-c a") 'org-agenda)

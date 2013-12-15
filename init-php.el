@@ -1,6 +1,7 @@
 (require-package 'php-mode)
 
-(setq php-mode-coding-style 'symfony2)
+(setq php-mode-coding-style 'Symfony2)
+;; pear drupal wordpress
 
 ;; 更改php注释类型
 (add-hook 'php-mode-hook
