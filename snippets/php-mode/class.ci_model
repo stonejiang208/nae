@@ -1,0 +1,13 @@
+#name : CodeIngiter Model Class
+#key : class
+# --
+class ${1:Model_name} extends CI_Model {
+
+    public function __construct()
+    {
+        parrent::__construct();
+    }
+
+    $0
+
+}
