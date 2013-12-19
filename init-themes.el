@@ -1,7 +1,7 @@
 (require-package 'color-theme-sanityinc-solarized)
 (require-package 'monokai-theme)
 
-;; 默认主题
+;; 默认主题 （monokai、sanityinc-inc-solarized-light、sanityinc-solarized-dark）
 (setq-default custom-enabled-themes '(monokai))
 
 ;; 确保主题在没有配置主题的情况下也能启用
