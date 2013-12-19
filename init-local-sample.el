@@ -8,4 +8,7 @@
 
 (setq shell-file-name "/bin/bash")
 
+;; 设定emacsclient路径
+(setq magit-emacsclient-executable "emacsclient-path")
+
 (provide 'init-local)
