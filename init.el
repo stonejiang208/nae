@@ -3,6 +3,9 @@
 (add-to-list 'load-path user-emacs-directory)
 (add-to-list 'load-path (expand-file-name "local/" user-emacs-directory))
 
+;; 彩蛋
+(defconst wq! "Damn you! I am not vi!  Use C-x C-c instead.")
+
 (require 'init-utils)
 (require 'init-elpa)
 (require 'init-themes)
