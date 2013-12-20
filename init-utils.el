@@ -121,13 +121,21 @@ or just one char if that's not possible"
     ;; backward-delete-whitespace-to-column使其支持killflag参数
     (t (backward-delete-whitespace-to-column))))
 
-;; 再研究
-(defun clean-whitespace-region (start end)
-  "Untabifies, removes trailing whitespace, and re-indents the region"
-  (interactive "r")
-  (save-excursion
-    (untabify start end)
-    ;; (c-indent-region start end)
-    (replace-regexp "[  ]+$" "" nil start end)))
+;; 删除除了当前光标所在行以外的行的行末空白
+;; 修改自以下链接获取的代码
+;; http://stackoverflow.com/questions/3533703/emacs-delete-trailing-whitespace-except-current-line
+(defun delete-trailing-whitespace-except-current-line (region-start region-end)
+  (interactive)
+  (let ((cur-line-begin (line-beginning-position))
+        (cur-line-end (line-end-position)))
+    (save-excursion
+      (when (< (point-min) cur-line-begin)
+        (save-restriction
+          (narrow-to-region (point-min) (1- cur-line-begin))
+          (delete-trailing-whitespace region-start region-end)))
+      (when (> (point-max) cur-line-end)
+        (save-restriction
+          (narrow-to-region (1+ cur-line-end) (point-max))
+          (delete-trailing-whitespace region-start region-end))))))
 
 (provide 'init-utils)

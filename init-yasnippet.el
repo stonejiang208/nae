@@ -23,7 +23,7 @@ $0")
 ;; snippet展开结束后删除snippet范围内的行尾空白
 (add-hook 'yas-after-exit-snippet-hook
           '(lambda ()
-             (clean-whitespace-region yas-snippet-beg yas-snippet-end)
+             (delete-trailing-whitespace-except-current-line yas-snippet-beg yas-snippet-end)
              (setq show-trailing-whitespace t)))
 
 ;; 使用helm选择snippets
