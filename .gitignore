@@ -4,6 +4,7 @@ bookmarks
 tramp
 custom.el
 projectile-bookmarks.eld
+frame-restore-parameters
 
 init-local.el
 

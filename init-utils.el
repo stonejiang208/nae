@@ -121,4 +121,13 @@ or just one char if that's not possible"
     ;; backward-delete-whitespace-to-column使其支持killflag参数
     (t (backward-delete-whitespace-to-column))))
 
+;; 再研究
+(defun clean-whitespace-region (start end)
+  "Untabifies, removes trailing whitespace, and re-indents the region"
+  (interactive "r")
+  (save-excursion
+    (untabify start end)
+    ;; (c-indent-region start end)
+    (replace-regexp "[  ]+$" "" nil start end)))
+
 (provide 'init-utils)
