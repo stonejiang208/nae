@@ -67,4 +67,11 @@
             (lambda ()
               (local-set-key (kbd "<backspace>") 'my-delete-backward-char))))
 
+;; http://www.emacswiki.org/emacs/WholeLineOrRegion
+;; 上面链接有个bug fix，但是我没有遇到过上面描述的情况
+;; 一些作用于region的命令在没有region的情况下执行，作用范围为当前行
+(require 'whole-line-or-region)
+;; 默认启用该mode
+(whole-line-or-region-mode t)
+
 (provide 'init-editing-utils)
