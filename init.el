@@ -54,7 +54,6 @@
 
 (require 'init-key-bindings)
 
-(require 'init-local)
 (require 'init-hack)
 
 (require 'init-locales)
@@ -65,5 +64,9 @@
   (server-start))
 
 ;; Customize Emacs所自动生成的配置
-(setq custom-file "~/.emacs.d/custom.el")
-(load custom-file)
+(setq custom-file (expand-file-name "custom.el" user-emacs-directory))
+(when (file-exists-p custom-file)
+  (load custom-file))
+
+;; 本地配置
+(require 'init-local nil t)
