@@ -74,3 +74,4 @@
 ### 已知bug
 
 * 在没有选中文字的情况下使用 `C-w` 或者 `M-w` 剪切复制文字后，通常情况下使用 `C-y` 会把剪切或复制的文件粘贴到光标所在位置的上一行，但在org-mode下失效。 （找到原因了，org-mode下 `C-y` 绑定的命令是 `org-yank`）
+* auto-complete 和 yasnippet 冲突，最理想的情况下按tab先展开snippet，没有snippet的情况下在自动完成。

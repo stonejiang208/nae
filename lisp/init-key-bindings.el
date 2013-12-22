@@ -1,6 +1,8 @@
 (setq mac-command-modifier 'meta)
 (setq mac-option-modifier 'none)
 
+(global-set-key (kbd "RET") 'newline-and-indent)
+
 (global-set-key (kbd "C-c f") 'jump-to-char)
 
 (global-set-key (kbd "C-c a") 'org-agenda)
@@ -13,7 +15,7 @@
 (global-set-key (kbd "C-x r l") 'get-bookmarks-in-current-window)
 (global-set-key (kbd "M-.") 'helm-etags-select)
 (global-set-key (kbd "M-/") 'hippie-expand)
-(global-set-key (kbd "RET") 'newline-and-indent)
+;; (global-set-key (kbd "C-j") 'yas-expand)
 
 (global-set-key "\C-x2" 'split-window-below-and-focus)
 (global-set-key "\C-x3" 'split-window-right-and-focus)
