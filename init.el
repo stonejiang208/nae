@@ -33,6 +33,7 @@
 (require 'init-sessions)
 (require 'init-git)
 
+(require 'init-autopair)
 (require 'init-editing-utils)
 
 (require 'init-web-mode)

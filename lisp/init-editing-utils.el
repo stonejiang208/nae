@@ -60,12 +60,13 @@
   (add-hook hook
             (lambda () (setq show-trailing-whitespace nil))))
 
-(dolist (hook '(web-mode-hook
-                php-mode-hook
-                c-mode-hook))
-  (add-hook hook
-            (lambda ()
-              (local-set-key (kbd "<backspace>") 'my-delete-backward-char))))
+;; 以下与autopair冲突，我都不太记得之前为什么要搞下面这个
+;; (dolist (hook '(web-mode-hook
+;;                 php-mode-hook
+;;                 c-mode-hook))
+;;   (add-hook hook
+;;             (lambda ()
+;;               (local-set-key (kbd "<backspace>") 'my-delete-backward-char))))
 
 ;; http://www.emacswiki.org/emacs/WholeLineOrRegion
 ;; 上面链接有个bug fix，但是我没有遇到过上面描述的情况
