@@ -17,6 +17,10 @@
 
 (global-set-key "\C-x2" 'split-window-below-and-focus)
 (global-set-key "\C-x3" 'split-window-right-and-focus)
+(global-set-key (kbd "M-S-<up>") 'buf-move-up)
+(global-set-key (kbd "M-S-<down>") 'buf-move-down)
+(global-set-key (kbd "M-S-<left>") 'buf-move-left)
+(global-set-key (kbd "M-S-<right>") 'buf-move-right)
 
 (define-key ctl-x-4-map "t" 'toggle-window-split)
 
