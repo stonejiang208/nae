@@ -4,6 +4,9 @@
 ;; 允许使用S-<top>、S-<right>等移动窗口
 (windmove-default-keybindings)
 
+;; 移动窗格
+(require-package 'buffer-move)
+
 (require-package 'switch-window)
 (setq switch-window-shortcut-style 'alphabet)
 

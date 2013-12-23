@@ -1,6 +1,6 @@
-#contributor : Satoshi Nishimura <nishim314@gmail.com>
-#name : if (...) {...}
-#group : control structure
+# -*- mode: snippet -*-
+# name: if (...) {...}
+# key: if
 # --
 if (${1:condition})
 {

@@ -2,19 +2,76 @@
 
 ## 快捷键
 
-* `C-x C-o` delete-blank-lines
-* `C-.` set-mark-command
-* `C-c` f jump-to-char
-* `C-a a` org-agenda
-* `C-c g` magit-status
-* `C-c h` helm-mini
-* `M-x` smex
-* `C-x C-b` ibuffer
-* `C-x o` switch-window
-* `C-x r l` get-bookmarks-in-current-window
-* `M-.` helm-etags-select
-* `M-/` hippie-expand
-* `RET` newline-and-indent
-* `C-x2` split-window-below-and-focus
-* `C-x3` split-window-right-and-focus
-* `C-x 4 t` toggle-window-split
+以下命令中 `C` 代表 `ctrl`，M代表 `meta`，S代表 `shift` 键
+
+### 文件
+
+* `C-x C-f` 新建或者打开文件
+* `C-x C-s` 保存当前文件
+* `C-x s` 保存所有打开的文件
+* `C-x C-w` 当前文件另存为
+* `C-x C-b` 列出所有打开的文件列表
+* `C-x b` 切换到另一个文件
+
+### 编辑
+
+* `C-.`
+* `C-w` 剪切选中的部分，或没有文字选中时剪切当前行
+* `C-k` 剪切至行末
+* `C-S-backspace` 剪切当前行
+* `M-w` 复制选中的部分，或没有文字选中时复制当前行
+* `C-y` 粘贴
+* `M-y`
+* `C-x C-o` 两行文字之间的空行合并成一行
+
+### 通用
+
+* `C-g`
+* `M-x` 执行命令
+* `C-x u` 显示undo-tree
+* `C-x g` 打开magit，内置的git客户端
+
+### 移动
+
+* `RET` 换行并自动缩进
+* `C-a` 移动到行首
+* `C-e` 移动到行末
+* `M-g M-g` 跳到指定的行
+* `C-s` 向下搜索
+* `C-r` 向上搜索
+
+### 窗格管理（window）
+
+* `C-x 0` 关闭当前窗格
+* `C-x 1` 只保留当前窗格
+* `C-x 2` 水平分屏，并将光标移动到新的窗格
+* `C-x 3` 垂直分屏，并将光标移动到新的窗格
+* `C-x 4 t` 只有两个窗格的时候，水平分屏与垂直分屏来回切换
+* `C-x o` 跳到另一个窗格
+* `S-<up>` 跳到上边的窗格
+* `S-<down>` 跳到下边的窗格
+* `S-<left>` 跳到左边的窗格
+* `S-<right>` 跳到右边的窗格
+* `M-S-<up>` 将当前窗格和上边的窗格交换位置
+* `M-S-<down>` 将当前窗格和下边的窗格交换位置
+* `M-S-<left>` 将当前窗格和左边的窗格交换位置
+* `M-S-<right>` 将当前窗格和右边的窗格交换位置
+
+### 其它
+* `C-x r l` 列出所有书签
+* `C-x r m` 添加书签
+* `M-.`
+* `M-/`
+
+### 帮助
+* `C-h t` 基本的教程
+* `C-h k` 指定快捷键的说明
+* `C-h f` 指定命令的说明
+* `C-h m` 当前mode的说明
+
+## 说明
+
+### 已知bug
+
+* 在没有选中文字的情况下使用 `C-w` 或者 `M-w` 剪切复制文字后，通常情况下使用 `C-y` 会把剪切或复制的文件粘贴到光标所在位置的上一行，但在org-mode下失效。 （找到原因了，org-mode下 `C-y` 绑定的命令是 `org-yank`）
+* auto-complete 和 yasnippet 冲突，最理想的情况下按tab先展开snippet，没有snippet的情况下在自动完成。

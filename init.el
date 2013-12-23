@@ -1,7 +1,7 @@
 ;; 2013.8
 
-(add-to-list 'load-path user-emacs-directory)
-(add-to-list 'load-path (expand-file-name "local/" user-emacs-directory))
+(add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
+(add-to-list 'load-path (expand-file-name "local" user-emacs-directory))
 
 ;; 彩蛋
 (defconst wq! "Damn you! I am not vi!  Use C-x C-c instead.")
@@ -22,9 +22,9 @@
 (require 'init-flycheck)
 ;; (require 'init-flyspell)
 (require 'init-compile)
+(require 'init-yasnippet)
 (require 'init-auto-complete)
 (require 'init-helm)
-(require 'init-yasnippet)
 
 (require 'init-ido)
 (require 'init-bookmark)
@@ -33,6 +33,7 @@
 (require 'init-sessions)
 (require 'init-git)
 
+(require 'init-autopair)
 (require 'init-editing-utils)
 
 (require 'init-web-mode)
@@ -54,7 +55,6 @@
 
 (require 'init-key-bindings)
 
-(require 'init-local)
 (require 'init-hack)
 
 (require 'init-locales)
@@ -65,5 +65,9 @@
   (server-start))
 
 ;; Customize Emacs所自动生成的配置
-(setq custom-file "~/.emacs.d/custom.el")
-(load custom-file)
+(setq custom-file (expand-file-name "custom.el" user-emacs-directory))
+(when (file-exists-p custom-file)
+  (load custom-file))
+
+;; 本地配置
+(require 'init-local nil t)

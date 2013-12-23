@@ -31,8 +31,10 @@
               (mode 16 16 :left :elide)
               " "
               (vc-status 16 16 :left)
-              " "
-              filename-and-process)))
+              ;; TODO: filename-and-process太长，先隐藏掉，以后再找替代方案
+              ;; " "
+              ;; filename-and-process
+              )))
 
 (setq ibuffer-filter-group-name-face 'font-lock-doc-face)
 

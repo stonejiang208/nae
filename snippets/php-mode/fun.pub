@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: fun.pub
+# key: fun
+# --
+public function() {
+    $0
+}
