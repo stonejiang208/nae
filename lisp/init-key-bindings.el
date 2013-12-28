@@ -1,3 +1,6 @@
+(setq mac-command-modifier 'meta)
+(setq mac-option-modifier 'none)
+
 (global-set-key (kbd "RET") 'newline-and-indent)
 
 (global-set-key (kbd "C-c f") 'jump-to-char)
