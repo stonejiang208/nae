@@ -13,7 +13,7 @@
   (dolist (charset '(kana han symbol cjk-misc bopomofo))
     (set-fontset-font (frame-parameter nil 'font) charset
                       (font-spec :family chinese :size chinese-size))))
-(set-font "Source Code Pro" "STHeiti" 14 16)
+;; (set-font "Source Code Pro" "STHeiti" 14 16)
 
 (setq inhibit-startup-message t)
 
