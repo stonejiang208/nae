@@ -1,5 +1,6 @@
-(setq mac-command-modifier 'meta)
-(setq mac-option-modifier 'none)
+(when *is-a-mac*
+  (setq mac-command-modifier 'meta)
+  (setq mac-option-modifier 'none))
 
 (global-set-key (kbd "RET") 'newline-and-indent)
 
