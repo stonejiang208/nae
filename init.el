@@ -3,6 +3,9 @@
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
 (add-to-list 'load-path (expand-file-name "local" user-emacs-directory))
 
+(defconst *is-a-mac* (eq system-type 'darwin))
+(defconst *is-gui* (if window-system t nil))
+
 ;; 彩蛋
 (defconst wq! "Damn you! I am not vi!  Use C-x C-c instead.")
 
