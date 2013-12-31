@@ -1,6 +1,19 @@
 (require-package 'php-mode)
 
-(setq php-mode-coding-style 'Symfony2)
+;; 提供选择的coding style：codeigniter、drupal、pear、symfony2、wordpress
+;; (setq my-php-mode-coding-style 'codeigniter)
+(setq php-mode-coding-style 'symfony2)
+
+;; (cond ((memq my-php-mode-coding-style '(drupal pear symfony2 wordpress))
+;;        (setq php-mode-coding-style my-php-mode-coding-style))
+;;       ((eq my-php-mode-coding-style 'codeigniter)
+;;        (setq php-mode-coding-style 'pear)))
+
+;; (defun check-php-coding-style (styles)
+;;   (and (boundp 'my-php-mode-coding-style)
+;;        (memq my-php-mode-coding-style styles)))
+
+;; (check-php-coding-style '(pear symfony2))
 
 ;; 更改php注释类型
 (add-hook 'php-mode-hook
