@@ -1,6 +1,5 @@
 (require-package 'php-mode)
 
-<<<<<<< HEAD:lisp/init-php.el
 ;; 提供选择的coding style：codeigniter、drupal、pear、symfony2、wordpress
 ;; (setq my-php-mode-coding-style 'codeigniter)
 (setq php-mode-coding-style 'symfony2)
@@ -15,9 +14,7 @@
 ;;        (memq my-php-mode-coding-style styles)))
 
 ;; (check-php-coding-style '(pear symfony2))
-=======
 (setq php-mode-coding-style 'symfony2)
->>>>>>> 1093aa91a3578b4a31db118f357a203945068b42:config/init-php.el
 
 ;; 更改php注释类型
 (add-hook 'php-mode-hook
