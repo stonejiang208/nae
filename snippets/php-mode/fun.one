@@ -1,0 +1,7 @@
+# name: fun one
+# key: fun
+# condition: (and (boundp 'php-mode-coding-style) (memq php-mode-coding-style '(drupal wordpress)))
+# --
+function ${1:name}(${2:$args}) {
+    $0
+}
