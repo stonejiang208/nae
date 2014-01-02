@@ -1,7 +1,7 @@
 ;; 2013.8
 
 (add-to-list 'load-path (expand-file-name "config" user-emacs-directory))
-(add-to-list 'load-path (expand-file-name "local" user-emacs-directory))
+(add-to-list 'load-path (expand-file-name "vendor" user-emacs-directory))
 
 (defconst *is-a-mac* (eq system-type 'darwin))
 (defconst *is-gui* (if window-system t nil))
@@ -46,6 +46,7 @@
 (require 'init-slime)
 (require 'init-emmet)
 (require 'init-vimrc-mode)
+(require 'init-thrift)
 
 (require 'init-shell)
 (require 'init-w3m)
