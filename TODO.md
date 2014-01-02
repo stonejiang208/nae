@@ -9,3 +9,4 @@
 * 缴械投降，那啥auto complete和yasnippet使用不同的快捷键
 * popup这货哪里冒出来的？明天研究下。
 * S-up S-down等支持循环
+* 让thrift-mode支持 // 注释
