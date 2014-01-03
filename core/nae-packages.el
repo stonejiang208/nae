@@ -21,4 +21,4 @@ re-downloaded in order to locate PACKAGE."
 
 (package-initialize)
 
-(provide 'nae-elpa)
+(provide 'nae-packages)
