@@ -14,7 +14,7 @@ init-local.el
 .session
 
 backup/*
-elpa/*
+packages/*
 eshell/*
 url/*
 DouBanMusic/*
