@@ -6,7 +6,7 @@ custom.el
 projectile-bookmarks.eld
 frame-restore-parameters
 
-init-local.el
+nae-local.el
 
 .DS_Store
 .emacs.desktop
@@ -14,7 +14,7 @@ init-local.el
 .session
 
 backup/*
-elpa/*
+packages/*
 eshell/*
 url/*
 DouBanMusic/*

@@ -4,6 +4,8 @@
 (add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/"))
 (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
 
+(setq package-user-dir "~/.emacs.d/packages")
+
 ;; 自动安装所需的package
 (defun require-package (package &optional min-version no-refresh)
   "Install given PACKAGE, optionally requiring MIN-VERSION.
@@ -19,4 +21,4 @@ re-downloaded in order to locate PACKAGE."
 
 (package-initialize)
 
-(provide 'nae-elpa)
+(provide 'nae-packages)

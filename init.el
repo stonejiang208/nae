@@ -1,5 +1,6 @@
 ;; 2013.8
 
+(add-to-list 'load-path (expand-file-name "core" user-emacs-directory))
 (add-to-list 'load-path (expand-file-name "config" user-emacs-directory))
 (add-to-list 'load-path (expand-file-name "vendor" user-emacs-directory))
 
@@ -10,7 +11,7 @@
 (defconst wq! "Damn you! I am not vi!  Use C-x C-c instead.")
 
 (require 'nae-utils)
-(require 'nae-elpa)
+(require 'nae-packages)
 (require 'nae-themes)
 ;; (require 'nae-exec-path)
 
@@ -46,6 +47,7 @@
 (require 'nae-slime)
 (require 'nae-emmet)
 (require 'nae-vimrc-mode)
+(require 'nae-thrift)
 
 (require 'nae-shell)
 ;; (require 'nae-w3m)
