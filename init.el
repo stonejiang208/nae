@@ -47,6 +47,7 @@
 (require 'nae-slime)
 (require 'nae-emmet)
 (require 'nae-vimrc-mode)
+(require 'nae-thrift)
 
 (require 'nae-shell)
 ;; (require 'nae-w3m)
