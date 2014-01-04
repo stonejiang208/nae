@@ -1,8 +1,6 @@
 (require-package 'org '(20130916))
 (require-package 'htmlize)
 
-(add-to-list 'auto-mode-alist '("\\.txt\\'" . org-mode))
-
 ;; 记录TODO完成的时间
 (setq org-log-done 'time)
 
