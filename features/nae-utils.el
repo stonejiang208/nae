@@ -138,4 +138,31 @@ or just one char if that's not possible"
           (narrow-to-region (1+ cur-line-end) (point-max))
           (delete-trailing-whitespace region-start region-end))))))
 
+;; 根据point得到point在哪一行
+(defun nae-point-at-line (point)
+  (save-restriction
+    (widen)
+    (save-excursion
+      (goto-char point)
+      (beginning-of-line)
+      (1+ (count-lines 1 (point))))))
+
+;; 得到某一行行首的point
+(defun nae-line-beg-point (line)
+  (save-restriction
+    (widen)
+    (save-excursion
+      (goto-line line)
+      (beginning-of-line)
+      (point))))
+
+;; 得到某一行行末的point
+(defun nae-line-end-point (line)
+  (save-restriction
+    (widen)
+    (save-excursion
+      (goto-line line)
+      (end-of-line)
+      (point))))
+
 (provide 'nae-utils)
