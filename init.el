@@ -39,7 +39,7 @@
 (require 'nae-sessions)
 (require 'nae-git)
 
-(require 'nae-autopair)
+;; (require 'nae-autopair)
 (require 'nae-editing-utils)
 
 (require 'nae-web-mode)
