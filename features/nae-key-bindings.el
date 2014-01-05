@@ -20,10 +20,30 @@
 
 (global-set-key "\C-x2" 'split-window-below-and-focus)
 (global-set-key "\C-x3" 'split-window-right-and-focus)
-(global-set-key (kbd "M-S-<up>") 'buf-move-up)
-(global-set-key (kbd "M-S-<down>") 'buf-move-down)
-(global-set-key (kbd "M-S-<left>") 'buf-move-left)
-(global-set-key (kbd "M-S-<right>") 'buf-move-right)
+
+;; window间切换
+(global-set-key (kbd "S-<up>") 'windmove-up-cycle)
+(global-set-key (kbd "S-<down>") 'windmove-down-cycle)
+(global-set-key (kbd "S-<right>") 'windmove-right-cycle)
+(global-set-key (kbd "S-<left>") 'windmove-left-cycle)
+
+;; 交换window
+(global-set-key (kbd "S-M-<up>") 'buffer-up-swap)
+(global-set-key (kbd "S-M-<down>") 'buffer-down-swap)
+(global-set-key (kbd "S-M-<right>") 'buffer-right-swap)
+(global-set-key (kbd "S-M-<left>") 'buffer-left-swap)
+
+;; Window Resizing keybindings
+;; (global-set-key (kbd "S-C-<left>") 'shrink-window-horizontally)
+;; (global-set-key (kbd "S-C-<right>") 'enlarge-window-horizontally)
+;; (global-set-key (kbd "S-C-<down>") 'shrink-window)
+;; (global-set-key (kbd "S-C-<up>") 'enlarge-window)
+
+;; iTerm meta-shift-<arrows> fix
+;; (define-key input-decode-map "\e[1;10A" [M-S-up])
+;; (define-key input-decode-map "\e[1;10B" [M-S-down])
+;; (define-key input-decode-map "\e[1;10C" [M-S-right])
+;; (define-key input-decode-map "\e[1;10D" [M-S-left])
 
 (define-key ctl-x-4-map "t" 'toggle-window-split)
 
