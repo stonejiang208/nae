@@ -5,10 +5,6 @@
 (defconst *is-a-mac* (eq system-type 'darwin))
 (defconst *is-gui* (if window-system t nil))
 
-(setq user-full-name "hellobear")
-(setq user-login-name "hellobear")
-(setq user-mail-address "hellobear@foxmail.com")
-
 ;; 彩蛋
 (defconst wq! "Damn you! I am not vi!  Use C-x C-c instead.")
 
@@ -40,7 +36,7 @@
 (require 'nae-git)
 (require 'nae-vi)
 
-;; (require 'nae-autopair)
+(require 'nae-autopair)
 (require 'nae-editing-utils)
 
 (require 'nae-web-mode)
