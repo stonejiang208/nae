@@ -8,6 +8,7 @@
       ((eq nae-php-mode-coding-style 'codeigniter)
        (setq php-mode-coding-style 'pear)))
 
+;; 当前php coding style是否在列表实参中
 (defun nae-in-php-coding-styles (styles)
   (and (boundp 'nae-php-mode-coding-style)
        (memq nae-php-mode-coding-style styles)))
@@ -17,8 +18,10 @@
 ;; 更改php注释类型
 (add-hook 'php-mode-hook
           (lambda ()
-            (cond ((eq nae-php-mode-coding-style 'codeigniter)
-                   (yas-activate-extra-mode 'codeigniter-mode)))
+            ;; 以下intern改成make-symbol会达不到预期效果，尚不是很明白两者的区别
+            (when (memq nae-php-mode-coding-style '(codeigniter))
+              (yas-activate-extra-mode (intern (concat (symbol-name nae-php-mode-coding-style) "-mode"))))
+
             (setq php-manual-path "~/.emacs.d/php-manual/")
             ;; 避免与global-set-key的冲突
             (local-unset-key (kbd "C-."))
