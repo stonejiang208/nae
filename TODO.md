@@ -11,4 +11,3 @@
 * S-up S-down等支持循环
 * 让thrift-mode支持 // 注释
 * thrift后缀文件自动加载thrift-mode
-* 开分支(setq user-full-name)
