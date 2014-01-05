@@ -38,6 +38,7 @@
 (require 'nae-windows)
 (require 'nae-sessions)
 (require 'nae-git)
+(require 'nae-vi)
 
 ;; (require 'nae-autopair)
 (require 'nae-editing-utils)
