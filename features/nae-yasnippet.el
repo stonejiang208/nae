@@ -19,10 +19,18 @@ $0")
           '(lambda ()
              (setq show-trailing-whitespace nil)))
 
-;; snippet展开结束后删除snippet范围内的行尾空白
 (add-hook 'yas-after-exit-snippet-hook
           '(lambda ()
+             ;; snippet展开结束后删除snippet范围内的行尾空白
              (delete-trailing-whitespace-except-current-line yas-snippet-beg yas-snippet-end)
+
+             ;; 展开后根据indent-tabs-mode对空格进行转换
+             (if indent-tabs-mode
+                 (tabify yas-snippet-beg yas-snippet-end)
+               (untabify yas-snippet-beg yas-snippet-end))
+             ;; 光标所在位置移动到行末
+             (end-of-visual-line)
+
              (setq show-trailing-whitespace t)))
 
 (setq yas-prompt-functions '(yas-ido-prompt yas-no-prompt))
