@@ -5,6 +5,18 @@
 (defvar newline-and-indent t
   "Modify the behavior of the open-*-line functions to cause them to autoindent.")
 
+;; 模仿vi的f
+(defun jump-to-char (n char)
+  "Move forward to Nth occurence of CHAR.
+Typing `jump-to-char-key' again will move forwad to the next Nth
+occurence of CHAR."
+  (interactive "p\ncGo to char: ")
+  (search-forward (string char) nil nil n)
+  (while (char-equal (read-char)
+		     char)
+    (search-forward (string char) nil nil n))
+  (setq unread-command-events (list last-input-event)))
+
 ;; Behave like vi's o command
 ;; 取自 http://www.emacswiki.org/emacs/OpenNextLine
 (defun open-next-line (arg)
@@ -28,6 +40,7 @@
   (when newline-and-indent
     (indent-according-to-mode)))
 
+(define-key vi-key-map (kbd "f") 'jump-to-char)
 (define-key vi-key-map (kbd "o") 'open-next-line)
 (define-key vi-key-map (kbd "O") 'open-previous-line)
 
