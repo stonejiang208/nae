@@ -1,7 +1,5 @@
-;; 2013.8
-
 (add-to-list 'load-path (expand-file-name "core" user-emacs-directory))
-(add-to-list 'load-path (expand-file-name "config" user-emacs-directory))
+(add-to-list 'load-path (expand-file-name "features" user-emacs-directory))
 (add-to-list 'load-path (expand-file-name "vendor" user-emacs-directory))
 
 (defconst *is-a-mac* (eq system-type 'darwin))
