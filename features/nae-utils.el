@@ -124,7 +124,7 @@ or just one char if that's not possible"
           (delete-trailing-whitespace)))
       (when (< (point-min) cur-line-begin)
         (save-restriction
-          (narrow-to-region (region-start) (1- cur-line-begin))
+          (narrow-to-region region-start (1- cur-line-begin))
           (delete-trailing-whitespace))))))
 
 ;; 根据point得到point在哪一行
