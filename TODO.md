@@ -6,8 +6,8 @@
 * 为撤销和重做分别绑定一个键，不用每次进行相关操作都打开undo-tree
 * 调整窗格大小
 * 代码折叠（Code folding）
-* 缴械投降，那啥auto complete和yasnippet使用不同的快捷键
 * popup这货哪里冒出来的？明天研究下。
-* S-up S-down等支持循环
 * 让thrift-mode支持 // 注释
 * thrift后缀文件自动加载thrift-mode
+* projectile c-c p a无法搜索
+* 添加vim模拟

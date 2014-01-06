@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: ldmodel
+# key: ldmodel
+# --
+$this->load->model($0);
