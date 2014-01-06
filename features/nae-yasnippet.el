@@ -31,12 +31,12 @@ $0")
 
                ;; 移除展开的代码断范围内的行末空格
                ;; 这里结束后显示Mark set
-               (delete-trailing-whitespace-except-current-line
-                (nae-line-beg-point line-beg)
-                (nae-line-end-point line-end))
+               ;; (delete-trailing-whitespace-except-current-line
+               ;;  (nae-line-beg-point line-beg)
+               ;;  (nae-line-end-point line-end))
+               )
 
                ;; 光标移动至行末
-               (end-of-visual-line))
 
              ;; 显示行末空白
              (setq show-trailing-whitespace t)))

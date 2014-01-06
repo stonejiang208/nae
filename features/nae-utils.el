@@ -110,21 +110,22 @@ or just one char if that's not possible"
     (t (backward-delete-whitespace-to-column))))
 
 ;; 删除除了当前光标所在行以外的行的行末空白
-;; 修改自以下链接获取的代码
-;; http://stackoverflow.com/questions/3533703/emacs-delete-trailing-whitespace-except-current-line
+;; 修改自 http://stackoverflow.com/q/3533703
 (defun delete-trailing-whitespace-except-current-line (region-start region-end)
-  (interactive)
+  ;; (interactive)
   (let ((cur-line-begin (line-beginning-position))
         (cur-line-end (line-end-position)))
     (save-excursion
-      (when (< (point-min) cur-line-begin)
-        (save-restriction
-          (narrow-to-region (point-min) (1- cur-line-begin))
-          (delete-trailing-whitespace region-start region-end)))
+      ;; 必须先删除当前行以下的行的行末空格后再删除当前行以上的行的行末空格，原因是
+      ;; 先删除了当前行以上的行的行末空格后cur-line-end的值不应该还是原来的值
       (when (> (point-max) cur-line-end)
         (save-restriction
-          (narrow-to-region (1+ cur-line-end) (point-max))
-          (delete-trailing-whitespace region-start region-end))))))
+          (narrow-to-region (1+ cur-line-end) region-end)
+          (delete-trailing-whitespace)))
+      (when (< (point-min) cur-line-begin)
+        (save-restriction
+          (narrow-to-region (region-start) (1- cur-line-begin))
+          (delete-trailing-whitespace))))))
 
 ;; 根据point得到point在哪一行
 (defun nae-point-at-line (point)
