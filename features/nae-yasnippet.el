@@ -19,10 +19,23 @@ $0")
           '(lambda ()
              (setq show-trailing-whitespace nil)))
 
-;; snippet展开结束后删除snippet范围内的行尾空白
 (add-hook 'yas-after-exit-snippet-hook
           '(lambda ()
-             (delete-trailing-whitespace-except-current-line yas-snippet-beg yas-snippet-end)
+             ;; snippet展开结束后删除snippet范围内的行尾空白
+             (let ((line-beg (nae-point-at-line yas-snippet-beg))
+                   (line-end (nae-point-at-line yas-snippet-end)))
+               ;; 展开后根据indent-tabs-mode对空格进行转换
+               (if indent-tabs-mode
+                   (tabify yas-snippet-beg yas-snippet-end)
+                 (untabify yas-snippet-beg yas-snippet-end))
+
+               ;; 移除展开的代码断范围内的行末空格
+               ;; 这里结束后显示Mark set
+               (delete-trailing-whitespace-except-current-line
+                (nae-line-beg-point line-beg)
+                (nae-line-end-point line-end)))
+
+             ;; 显示行末空白
              (setq show-trailing-whitespace t)))
 
 (setq yas-prompt-functions '(yas-ido-prompt yas-no-prompt))

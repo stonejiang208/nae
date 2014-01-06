@@ -11,3 +11,4 @@
 * thrift后缀文件自动加载thrift-mode
 * projectile c-c p a无法搜索
 * 添加vim模拟
+* yas-after-exit-snippet-hook那里使用replace-string貌似可以解决问题

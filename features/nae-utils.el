@@ -66,18 +66,6 @@ create it and write the initial message into it."
         (insert initial-scratch-message)))
     (switch-to-buffer scratch-buffer)))
 
-;; 模仿vim的f
-(defun jump-to-char (n char)
-  "Move forward to Nth occurence of CHAR.
-Typing `jump-to-char-key' again will move forwad to the next Nth
-occurence of CHAR."
-  (interactive "p\ncGo to char: ")
-  (search-forward (string char) nil nil n)
-  (while (char-equal (read-char)
-		     char)
-    (search-forward (string char) nil nil n))
-  (setq unread-command-events (list last-input-event)))
-
 ;; 按DEL键的时候删除一个tab或者一个tab宽度的空格
 ;; http://stackoverflow.com/questions/1450169/how-do-i-emulate-vims-softtabstop-in-emacs
 (defun backward-delete-whitespace-to-column ()
@@ -122,20 +110,48 @@ or just one char if that's not possible"
     (t (backward-delete-whitespace-to-column))))
 
 ;; 删除除了当前光标所在行以外的行的行末空白
-;; 修改自以下链接获取的代码
-;; http://stackoverflow.com/questions/3533703/emacs-delete-trailing-whitespace-except-current-line
+;; 修改自 http://stackoverflow.com/q/3533703
 (defun delete-trailing-whitespace-except-current-line (region-start region-end)
-  (interactive)
+  ;; (interactive)
   (let ((cur-line-begin (line-beginning-position))
         (cur-line-end (line-end-position)))
     (save-excursion
-      (when (< (point-min) cur-line-begin)
-        (save-restriction
-          (narrow-to-region (point-min) (1- cur-line-begin))
-          (delete-trailing-whitespace region-start region-end)))
+      ;; 必须先删除当前行以下的行的行末空格后再删除当前行以上的行的行末空格，原因是
+      ;; 先删除了当前行以上的行的行末空格后cur-line-end的值不应该还是原来的值
       (when (> (point-max) cur-line-end)
         (save-restriction
-          (narrow-to-region (1+ cur-line-end) (point-max))
-          (delete-trailing-whitespace region-start region-end))))))
+          (narrow-to-region (1+ cur-line-end) region-end)
+          (delete-trailing-whitespace)))
+      (when (< (point-min) cur-line-begin)
+        (save-restriction
+          (narrow-to-region region-start (1- cur-line-begin))
+          (delete-trailing-whitespace))))))
+
+;; 根据point得到point在哪一行
+(defun nae-point-at-line (point)
+  (save-restriction
+    (widen)
+    (save-excursion
+      (goto-char point)
+      (beginning-of-line)
+      (1+ (count-lines 1 (point))))))
+
+;; 得到某一行行首的point
+(defun nae-line-beg-point (line)
+  (save-restriction
+    (widen)
+    (save-excursion
+      (goto-line line)
+      (beginning-of-line)
+      (point))))
+
+;; 得到某一行行末的point
+(defun nae-line-end-point (line)
+  (save-restriction
+    (widen)
+    (save-excursion
+      (goto-line line)
+      (end-of-line)
+      (point))))
 
 (provide 'nae-utils)
