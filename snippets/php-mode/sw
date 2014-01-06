@@ -1,13 +1,11 @@
 # -*- mode: snippet -*-
-# name: Allman style try
-# key: try
+# name: Allman style switch
+# key: sw
 # condition: (and (fboundp 'nae-in-php-coding-styles) (nae-in-php-coding-styles '(codeigniter)))
 # --
-try
+switch (${1:true})
 {
-	$1
-}
-catch (${2:Exception} ${3:$e})
-{
-	$0
+	case $2:
+		$0
+	default:
 }

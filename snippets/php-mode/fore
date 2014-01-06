@@ -1,7 +1,9 @@
-#contributor : Satoshi Nishimura <nishim314@gmail.com>
-#name : fore (...) {...}
-#group : control structure
+# -*- mode: snippet -*-
+# name: Allman style foreach
+# key: fore
+# condition: (and (fboundp 'nae-in-php-coding-styles) (nae-in-php-coding-styles '(codeigniter)))
 # --
-foreach (${1:$iterator} as ${2:$key => $value}) {
-    $0
+foreach (${1:$iterator} as ${2:$key => $value})
+{
+	$0
 }

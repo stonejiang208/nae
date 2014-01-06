@@ -1,6 +1,7 @@
-#name : <?php
-#key : php
-#group : definitions
+# -*- mode: snippet -*-
+# name: Allman style while
+# key: wh
+# condition: (and (fboundp 'nae-in-php-coding-styles) (nae-in-php-coding-styles '(codeigniter)))
 # --
 <?php
 $0
