@@ -2,12 +2,12 @@
 
 ;; 提供选择的coding style：codeigniter、drupal、pear、symfony2、wordpress
 ;; (setq nae-php-mode-coding-style 'codeigniter)
-(setq nae-php-mode-coding-style 'symfony2)
+(setq nae-php-mode-coding-style 'codeigniter)
 
 (cond ((memq nae-php-mode-coding-style '(drupal pear symfony2 wordpress))
        (setq php-mode-coding-style nae-php-mode-coding-style))
       ((eq nae-php-mode-coding-style 'codeigniter)
-       (setq php-mode-coding-style 'pear)))
+       (setq php-mode-coding-style 'symfony2)))
 
 ;; 当前php coding style是否在列表实参中
 (defun nae-in-php-coding-styles (styles)
