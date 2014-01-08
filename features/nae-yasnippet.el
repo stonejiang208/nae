@@ -12,7 +12,9 @@
 # --
 $0")
 
-;; 缩进至当前列
+;; 展开后indent-according-to-mode
+;; (setq yas-indent-line 'auto)
+;; 缩进至当前行
 (setq yas-indent-line 'fixed)
 
 (add-hook 'yas-before-expand-snippet-hook
@@ -39,6 +41,11 @@ $0")
              (setq show-trailing-whitespace t)))
 
 (setq yas-prompt-functions '(yas-ido-prompt yas-no-prompt))
+
+;; snippet mode使用tab进行缩进，便于展开后tab转换成空格
+(add-hook 'snippet-mode-hook
+          (lambda ()
+            (setq indent-tabs-mode t)))
 
 ;; 以下取消yasnippet默认的tab绑定，并绑定C-i为新的快捷键
 ;; 下面问题的答案中提到tab和C-i在ASCII中表示同样的字符，所以一般给C-i绑定新功能，会同时影响tab的
