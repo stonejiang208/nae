@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name: Allman style function
+# key: f
+# condition: (and (fboundp 'nae-in-php-coding-styles) (nae-in-php-coding-styles '(codeigniter)))
+# --
+if ( ! function_exists('$1'))
+{
+	function ${1:name}(${2:$args})
+	{
+		$0
+	}
+}

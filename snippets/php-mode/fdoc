@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: function DocBlock
+# key: fdoc
+# --
+/**
+ * ${1:undocumented function}
+ *
+ * @return ${2:void}
+ */
