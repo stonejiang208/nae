@@ -11,4 +11,5 @@
 * thrift后缀文件自动加载thrift-mode
 * projectile c-c p a无法搜索
 * 添加vim模拟
-* yas-after-exit-snippet-hook那里使用replace-string貌似可以解决问题
+* codeigniter mode加载
+* <?php输入的时候回车会补全，想要的想过是换行
