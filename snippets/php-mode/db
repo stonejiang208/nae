@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: $this->db->
+# key: db
+# --
+$this->db->$0;

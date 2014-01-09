@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: array
+# key: arr
+# --
+$${1:array} = array(${2:${3:key} => ${4:value}});
