@@ -1,7 +1,5 @@
 # -*- mode: snippet -*-
-# name: Allman style while
-# key: wh
-# condition: (and (fboundp 'nae-in-php-coding-styles) (nae-in-php-coding-styles '(codeigniter)))
+# name: pec
+# key: pec
 # --
-<?php
-$0
+<?php echo $0; ?>
