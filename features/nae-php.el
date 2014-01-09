@@ -49,6 +49,6 @@ working with CodeIgniter."
 
             (setq php-manual-path "~/.emacs.d/php-manual/")
             ;; 避免与global-set-key的冲突
-            (local-unset-key (kbd "C-."))
+            (local-unset-key (kbd "C-."))))
 
 (provide 'nae-php)
