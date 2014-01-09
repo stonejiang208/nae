@@ -45,6 +45,8 @@ working with CodeIgniter."
           (lambda ()
             ;; 以下intern改成make-symbol会达不到预期效果，尚不是很明白两者的区别
             (when (memq nae-php-mode-coding-style '(codeigniter))
+              ;; 启用CodeIgniter Coding Style
+              (nae-php-enable-codeigniter-coding-style)
               (yas-activate-extra-mode (intern (concat (symbol-name nae-php-mode-coding-style) "-mode"))))
 
             (setq php-manual-path "~/.emacs.d/php-manual/")
