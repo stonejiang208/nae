@@ -16,4 +16,9 @@
 ;; html文件也用web-mode来编辑
 (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
 
+(add-hook 'web-mode-hook
+          (lambda ()
+            (when (memq nae-php-mode-coding-style '(codeigniter))
+              (yas-activate-extra-mode (intern (concat (symbol-name nae-php-mode-coding-style) "-mode"))))))
+
 (provide 'nae-web-mode)
