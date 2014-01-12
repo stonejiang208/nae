@@ -1,13 +1,13 @@
 (require-package 'web-mode)
 
-(defun my-set-web-mode-indentation (indentation)
+(defun nae-set-web-mode-indentation (indentation)
   (setq web-mode-markup-indent-offset indentation
         web-mode-css-indent-offset indentation
         web-mode-code-indent-offset indentation
         web-mode-style-padding indentation
         web-mode-script-padding indentation))
 
-(my-set-web-mode-indentation 2)
+(nae-set-web-mode-indentation 2)
 
 (setq web-mode-block-padding 0)
 (setq web-mode-disable-auto-pairing t)
