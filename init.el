@@ -1,11 +1,11 @@
 (defvar nae-dir user-emacs-directory)
 (defvar nae-core-dir (expand-file-name "core" nae-dir))
-(defvar nae-features-dir (expand-file-name  "features" nae-dir))
+(defvar nae-modules-dir (expand-file-name  "modules" nae-dir))
 (defvar nae-vendor-dir (expand-file-name  "vendor" nae-dir))
 (defvar nae-custom-dir (expand-file-name "custom" nae-dir))
 
 (add-to-list 'load-path nae-core-dir)
-(add-to-list 'load-path nae-features-dir)
+(add-to-list 'load-path nae-modules-dir)
 (add-to-list 'load-path nae-vendor-dir)
 
 (defconst *is-a-mac* (eq system-type 'darwin))
