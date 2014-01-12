@@ -16,6 +16,5 @@
 * web-mode和yasnippet不太兼容
 * 默认web-mode
 * codeigniter fill-column
-* nae-dir-locals.el
 * web-mode autopair 单引号
 * 每个文件头部的注释

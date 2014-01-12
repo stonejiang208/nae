@@ -1,6 +1,12 @@
-(add-to-list 'load-path (expand-file-name "core" user-emacs-directory))
-(add-to-list 'load-path (expand-file-name "features" user-emacs-directory))
-(add-to-list 'load-path (expand-file-name "vendor" user-emacs-directory))
+(defvar nae-dir user-emacs-directory)
+(defvar nae-core-dir (expand-file-name "core" nae-dir))
+(defvar nae-features-dir (expand-file-name  "features" nae-dir))
+(defvar nae-vendor-dir (expand-file-name  "vendor" nae-dir))
+(defvar nae-custom-dir (expand-file-name "custom" nae-dir))
+
+(add-to-list 'load-path nae-core-dir)
+(add-to-list 'load-path nae-features-dir)
+(add-to-list 'load-path nae-vendor-dir)
 
 (defconst *is-a-mac* (eq system-type 'darwin))
 (defconst *is-gui* (if window-system t nil))
@@ -69,7 +75,7 @@
   (server-start))
 
 ;; Customize Emacs所自动生成的配置
-(setq custom-file (expand-file-name "custom.el" user-emacs-directory))
+(setq custom-file (expand-file-name "custom.el" nae-custom-dir))
 (when (file-exists-p custom-file)
   (load custom-file))
 
