@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: $this->db->last_query()
+# key: last_query
+# --
+$this->db->last_query();
