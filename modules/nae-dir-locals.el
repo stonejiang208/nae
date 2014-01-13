@@ -9,11 +9,11 @@
                                 '((php-mode . ((eval . (progn (php-enable-symfony2-coding-style)))))))
 
 (dir-locals-set-class-variables 'yyadmin
-                                '((php-mode . ((eval . (progn (nae-php-enable-codeigniter-coding-style)
+                                '((php-mode . ((eval . (progn (nae-php-enable-coding-style 'codeigniter)
                                                               (setq indent-tabs-mode nil)))))))
 
 (dir-locals-set-directory-class "/Applications/MAMP/htdocs/Creuse/" 'creuse)
-(dir-locals-set-directory-class "/Applications/MAMP/htdocs/yyadmin/" 'yyadmin)
+(dir-locals-set-directory-class "/var/www/yyadmin/" 'yyadmin)
 (dir-locals-set-directory-class "~/Emacs/" 'creuse)
 
 ;; 使改变major mode后directory variables仍能生效
