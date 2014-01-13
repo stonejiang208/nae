@@ -3,6 +3,9 @@
 ;; 不预览
 (setq emmet-preview-default nil)
 
+;; 展开后高亮显示的时间
+(setq emmet-insert-flash-time 0.1)
+
 ;; 缩进
 (add-hook 'emmet-mode-hook (lambda () (setq emmet-indentation 2)))
 
