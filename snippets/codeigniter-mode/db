@@ -2,4 +2,4 @@
 # name: $this->db->
 # key: db
 # --
-$this->db->$0;
+$this->db->$0
