@@ -1,4 +1,4 @@
-(require-package 'projectile)
+(nae-require-package 'projectile)
 
 (projectile-global-mode)
 
@@ -6,7 +6,7 @@
 (setq projectile-globally-ignored-directories '(".idea" ".eunit" ".svn" ".git" ".hg" ".fslckout" ".bzr" "_darcs"))
 
 ;; ack
-(require-package 'ack-and-a-half)
+(nae-require-package 'ack-and-a-half)
 
 (defalias 'ack 'ack-and-a-half)
 (defalias 'ack-same 'ack-and-a-half-same)
@@ -14,7 +14,7 @@
 (defalias 'ack-find-file-same 'ack-and-a-half-find-file-same)
 
 ;; recentf
-(require-package 'recentf)
+(nae-require-package 'recentf)
 
 (recentf-mode 1)
 

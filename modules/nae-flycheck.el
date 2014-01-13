@@ -1,4 +1,4 @@
-(require-package 'flycheck)
+(nae-require-package 'flycheck)
 
 (global-flycheck-mode)
 

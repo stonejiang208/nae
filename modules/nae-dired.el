@@ -1,4 +1,4 @@
-(require-package 'dired+)
+(nae-require-package 'dired+)
 
 (put 'dired-find-alternate-file 'disabled nil)
 

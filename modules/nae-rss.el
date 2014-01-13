@@ -1,4 +1,4 @@
-(require-package 'elfeed)
+(nae-require-package 'elfeed)
 
 (setq elfeed-feeds
       '("http://coolshell.cn/feed"

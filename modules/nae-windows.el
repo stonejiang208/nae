@@ -4,7 +4,7 @@
 ;; 在window间移动以及window交换
 (require 'windcycle)
 
-(require-package 'switch-window)
+(nae-require-package 'switch-window)
 (setq switch-window-shortcut-style 'alphabet)
 
 ;; 垂直并排的两个windows切换为水平并排的windows

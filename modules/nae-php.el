@@ -1,4 +1,4 @@
-(require-package 'php-mode)
+(nae-require-package 'php-mode)
 
 ;; 提供选择的coding style：codeigniter、drupal、pear、symfony2、wordpress
 (setq nae-php-mode-coding-style 'symfony2)

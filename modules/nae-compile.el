@@ -1,4 +1,4 @@
-(require-package 'smart-compile)
+(nae-require-package 'smart-compile)
 
 (after-load 'smart-compile
   (add-to-list 'smart-compile-alist

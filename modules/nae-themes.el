@@ -1,5 +1,5 @@
-(require-package 'color-theme-sanityinc-solarized)
-(require-package 'monokai-theme)
+(nae-require-package 'color-theme-sanityinc-solarized)
+(nae-require-package 'monokai-theme)
 
 ;; 默认主题 （monokai、sanityinc-inc-solarized-light、sanityinc-solarized-dark）
 (setq-default custom-enabled-themes '(monokai))

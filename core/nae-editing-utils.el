@@ -14,7 +14,7 @@
 (setq blink-matching-paren t)
 
 ;; undo-tree
-(require-package 'undo-tree)
+(nae-require-package 'undo-tree)
 (global-undo-tree-mode 1)
 
 ;; 只在替换时大小写敏感

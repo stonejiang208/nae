@@ -1,4 +1,4 @@
-(require-package 'emmet-mode)
+(nae-require-package 'emmet-mode)
 
 ;; 不预览
 (setq emmet-preview-default nil)

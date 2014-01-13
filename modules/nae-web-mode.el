@@ -1,4 +1,4 @@
-(require-package 'web-mode)
+(nae-require-package 'web-mode)
 
 (defun nae-set-web-mode-indentation (indentation)
   (setq web-mode-markup-indent-offset indentation

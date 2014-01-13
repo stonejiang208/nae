@@ -1,4 +1,4 @@
-(require-package 'w3m)
+(nae-require-package 'w3m)
 
 ;; 开启按f键显示链接编号的功能
 (w3m-lnum-mode)

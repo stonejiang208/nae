@@ -1,3 +1,3 @@
-(require-package 'magit)
+(nae-require-package 'magit)
 
 (provide 'nae-git)
