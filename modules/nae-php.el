@@ -1,8 +1,7 @@
 (require-package 'php-mode)
 
 ;; 提供选择的coding style：codeigniter、drupal、pear、symfony2、wordpress
-;; (setq nae-php-mode-coding-style 'codeigniter)
-(setq nae-php-mode-coding-style 'codeigniter)
+(setq nae-php-mode-coding-style 'symfony2)
 
 (cond ((memq nae-php-mode-coding-style '(drupal pear symfony2 wordpress))
        (setq php-mode-coding-style nae-php-mode-coding-style))

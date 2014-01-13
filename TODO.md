@@ -8,8 +8,13 @@
 * 代码折叠（Code folding）
 * popup这货哪里冒出来的？明天研究下。
 * 让thrift-mode支持 // 注释
-* thrift后缀文件自动加载thrift-mode
 * projectile c-c p a无法搜索
 * 添加vim模拟
-* codeigniter mode加载
 * <?php输入的时候回车会补全，想要的想过是换行
+* emmet-insert-flash-time为负数的时候不起作用
+* 关闭当前buffer的同时关闭window
+* web-mode和yasnippet不太兼容
+* 默认web-mode
+* codeigniter fill-column
+* web-mode autopair 单引号
+* 每个文件头部的注释
