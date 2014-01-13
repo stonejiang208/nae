@@ -1,5 +1,6 @@
 # -*- mode: snippet -*-
-# name: pec
-# key: pec
+# name: php
+# key: php
 # --
-<?php echo $0; ?>
+<?php
+$0
