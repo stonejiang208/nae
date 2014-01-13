@@ -13,9 +13,7 @@
 $0")
 
 ;; 展开后indent-according-to-mode
-;; (setq yas-indent-line 'auto)
-;; 缩进至当前行
-(setq yas-indent-line 'fixed)
+(setq yas-indent-line 'auto)
 
 (add-hook 'yas-before-expand-snippet-hook
           '(lambda ()
