@@ -12,9 +12,13 @@
                                 '((php-mode . ((eval . (progn (nae-php-enable-coding-style 'codeigniter)
                                                               (setq indent-tabs-mode nil)))))))
 
+(dir-locals-set-class-variables 'thrift-php-lib
+                                '((php-mode . ((eval . (progn (setq tab-width 2)))))))
+
 (dir-locals-set-directory-class "/Applications/MAMP/htdocs/Creuse/" 'creuse)
 (dir-locals-set-directory-class "/var/www/yyadmin/" 'yyadmin)
 (dir-locals-set-directory-class "~/Emacs/" 'creuse)
+(dir-locals-set-directory-class "/var/www/yyadmin/thrift/lib/" 'thrift-php-lib)
 
 ;; 使改变major mode后directory variables仍能生效
 ;; 见 http://stackoverflow.com/a/19295380
