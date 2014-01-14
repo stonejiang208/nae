@@ -16,6 +16,8 @@
 ;; 彩蛋
 (defconst wq! "Damn you! I am not vi!  Use C-x C-c instead.")
 
+(require 'nae-packages)
+
 (load "nae-modules")
 
 ;; 开启server

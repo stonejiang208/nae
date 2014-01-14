@@ -1,5 +1,4 @@
 (require 'nae-utils)
-(require 'nae-packages)
 (require 'nae-themes)
 ;; (require 'nae-exec-path)
 
