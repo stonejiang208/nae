@@ -13,7 +13,8 @@
                                                               (setq indent-tabs-mode nil)))))))
 
 (dir-locals-set-class-variables 'thrift-php-lib
-                                '((php-mode . ((eval . (progn (setq tab-width 2)))))))
+                                '((php-mode . ((eval . (progn (setq tab-width 2)
+                                                              (setq c-basic-offset 2)))))))
 
 (dir-locals-set-directory-class "/Applications/MAMP/htdocs/Creuse/" 'creuse)
 (dir-locals-set-directory-class "/var/www/yyadmin/" 'yyadmin)
