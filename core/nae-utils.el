@@ -1,3 +1,34 @@
+;;; nae-utils.el --- part of NAE
+;;
+;; Copyright (C) 2013-2014 hellobear
+;;
+;; Author: hellobear <ihellobear@gmail.com>
+;; URL: https://github.com/hellobear/nae
+;; Keywords: convenience
+
+;; This file is not part of GNU Emacs.
+
+;;; Commentary:
+
+;; nae-utils.el of NAE
+
+;;; License:
+
+;; This program is free software: you can redistribute it and/or modify
+;; it under the terms of the GNU General Public License as published by
+;; the Free Software Foundation, either version 3 of the License, or
+;; (at your option) any later version.
+;;
+;; This program is distributed in the hope that it will be useful,
+;; but WITHOUT ANY WARRANTY; without even the implied warranty of
+;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+;; GNU General Public License for more details.
+;;
+;; You should have received a copy of the GNU General Public License
+;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+;;; Code:
+
 (defmacro after-load (feature &rest body)
   "After FEATURE is loaded, evaluate BODY."
   (declare (indent defun))
@@ -154,4 +185,12 @@ or just one char if that's not possible"
       (end-of-line)
       (point))))
 
+;; 见 http://stackoverflow.com/a/17277006/3171908
+(defun nae-filename (&optional filename)
+  "Return the base name of the FILENAME: no directory.
+FILENAME defaults to `buffer-file-name'."
+   (file-name-nondirectory (or filename (buffer-file-name))))
+
 (provide 'nae-utils)
+
+;;; nae-utils.el ends here

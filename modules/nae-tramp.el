@@ -1,3 +1,34 @@
+;;; nae-tramp.el --- part of NAE
+;;
+;; Copyright (C) 2013-2014 hellobear
+;;
+;; Author: hellobear <ihellobear@gmail.com>
+;; URL: https://github.com/hellobear/nae
+;; Keywords: convenience
+
+;; This file is not part of GNU Emacs.
+
+;;; Commentary:
+
+;; nae-tramp.el of NAE
+
+;;; License:
+
+;; This program is free software: you can redistribute it and/or modify
+;; it under the terms of the GNU General Public License as published by
+;; the Free Software Foundation, either version 3 of the License, or
+;; (at your option) any later version.
+;;
+;; This program is distributed in the hope that it will be useful,
+;; but WITHOUT ANY WARRANTY; without even the implied warranty of
+;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+;; GNU General Public License for more details.
+;;
+;; You should have received a copy of the GNU General Public License
+;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+;;; Code:
+
 (defvar find-file-root-prefix (if (featurep 'xemacs) "/[sudo/root@localhost]" "/sudo:root@localhost:" )
   "*The filename prefix used to open a file with `find-file-root'.")
 
@@ -68,3 +99,5 @@
       (find-alternate-file fname))))
 
 (provide 'nae-tramp)
+
+;;; nae-tramp.el ends here
