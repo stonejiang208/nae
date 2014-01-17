@@ -1,6 +1,6 @@
 (require 'nae-utils)
 (require 'nae-themes)
-;; (require 'nae-exec-path)
+(require 'nae-exec-path)
 
 (require 'nae-gui-frames)
 
@@ -38,7 +38,7 @@
 (require 'nae-thrift)
 
 (require 'nae-shell)
-;; (require 'nae-w3m)
+(require 'nae-w3m)
 (require 'nae-rss)
 (require 'nae-douban-fm)
 (require 'nae-calendar)
