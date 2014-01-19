@@ -18,3 +18,6 @@
 * codeigniter fill-column
 * web-mode autopair 单引号
 * 每个文件头部的注释
+* flycheck phpcs的配置，目前exec-path是暂时注释掉的
+* 给flycheck的几个函数定义快捷键
+* 80列线
