@@ -8,7 +8,7 @@
 * 代码折叠（Code folding）
 * popup这货哪里冒出来的？明天研究下。
 * 让thrift-mode支持 // 注释
-* projectile c-c p a无法搜索
+* projectile c-c p a无法搜索（找到原因，是因为exec path的原因）
 * 添加vim模拟
 * <?php输入的时候回车会补全，想要的想过是换行
 * emmet-insert-flash-time为负数的时候不起作用
