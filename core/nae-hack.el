@@ -35,11 +35,6 @@
 (if (boundp 'ac-dictionary-directories)
     (setq ac-dictionary-directories (append ac-dictionary-directories '("~/.emacs.d/auto-complete-dict"))))
 
-;; 超出80列的代码高亮
-(global-whitespace-mode 1)
-(setq whitespace-line-column 80)
-(setq whitespace-style '(face empty tabs lines-tail trailing))
-
 (provide 'nae-hack)
 
 ;;; nae-hack.el ends here
