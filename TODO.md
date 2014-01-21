@@ -1,4 +1,3 @@
-* 注释规范化
 * 在ibuffer mode下使用快捷键改变ibuffer-formats
 * emacs启动后窗口最大化
 * emacs启动后恢复原来的窗格布局（有难度）
