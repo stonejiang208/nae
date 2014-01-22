@@ -37,7 +37,9 @@
                                                               (setq indent-tabs-mode t)))))))
 
 (dir-locals-set-class-variables 'creuse
-                                '((php-mode . ((eval . (progn (php-enable-symfony2-coding-style)))))))
+                                '((php-mode . ((eval . (progn (php-enable-symfony2-coding-style)
+                                                              (setq flycheck-php-phpcs-executable "/Applications/MAMP/bin/php/php5.4.10/bin/phpcs")
+                                                              (setq flycheck-phpcs-standard "PSR2")))))))
 
 (dir-locals-set-class-variables 'yyadmin
                                 '((php-mode . ((eval . (progn (nae-php-enable-coding-style 'codeigniter)
@@ -48,7 +50,7 @@
                                                               (setq c-basic-offset 2)))))))
 
 (dir-locals-set-directory-class "/Applications/MAMP/htdocs/Creuse/" 'creuse)
-(dir-locals-set-directory-class "/var/www/yyadmin/" 'yyadmin)
+(dir-locals-set-directory-class "/Applications/MAMP/htdocs/yyadmin/" 'yyadmin)
 (dir-locals-set-directory-class "~/Emacs/" 'creuse)
 (dir-locals-set-directory-class "/var/www/yyadmin/thrift/lib/" 'thrift-php-lib)
 
