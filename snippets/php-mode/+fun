@@ -1,6 +1,6 @@
 # -*- mode: snippet -*-
 # name: public function
-# key: pub
+# key: +fun
 # --
 public function ${2:name}(${3:$args})
 {
