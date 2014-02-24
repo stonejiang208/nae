@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: return false
+# key: retf
+# condition: (and (fboundp 'nae-in-php-coding-styles) (nae-in-php-coding-styles '(symfony2)))
+# --
+return false;
