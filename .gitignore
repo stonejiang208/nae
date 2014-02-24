@@ -14,7 +14,7 @@ nae-local.el
 .session
 
 backup/*
-packages/*
+elpa/*
 eshell/*
 url/*
 DouBanMusic/*
