@@ -29,7 +29,6 @@
 
 ;;; Code:
 
-;; popup这个貌似要移到别的地方，有依赖关系，看github上其它仓库的做法
 (nae-require-package 'popup)
 (nae-require-package 'auto-complete)
 (require 'auto-complete-config)
