@@ -33,6 +33,10 @@
 
 (global-flycheck-mode)
 
+;; 将该变量置为空字符串值可以使默认不用phpcs checker
+;; 需要使用到phpcs checker的目录通过Directory Variables来设置
+(setq flycheck-php-phpcs-executable "")
+
 (provide 'nae-flycheck)
 
 ;;; nae-flycheck.el ends here
