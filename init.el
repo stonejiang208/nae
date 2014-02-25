@@ -64,6 +64,6 @@
   (load custom-file))
 
 ;; 本地配置
-(require 'local nil t)
+(require 'nae-local nil t)
 
 ;;; init.el ends here

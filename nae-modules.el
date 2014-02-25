@@ -31,7 +31,7 @@
 
 (require 'nae-utils)
 (require 'nae-themes)
-;; (require 'nae-exec-path)
+(require 'nae-exec-path)
 
 (require 'nae-gui-frames)
 
