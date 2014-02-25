@@ -18,7 +18,6 @@
 * flycheck phpcs的配置，目前exec-path是暂时注释掉的
 * 给flycheck的几个函数定义快捷键
 * 80列线
-* 将ihellobear@gmail.com改成i@hellobear.net
 * linux source code pro字体
 * 绑定一个同时保存buffer和kill-buffer的快捷键
 * C-x k不需要确认就可以直接删除buffer
