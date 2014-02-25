@@ -69,7 +69,7 @@
 (require 'nae-thrift)
 
 (require 'nae-shell)
-;; (require 'nae-w3m)
+(require 'nae-w3m)
 (require 'nae-rss)
 (require 'nae-douban-fm)
 (require 'nae-calendar)
