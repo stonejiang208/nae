@@ -2,7 +2,7 @@
 ;;
 ;; Copyright (C) 2013-2014 hellobear
 ;;
-;; Author: hellobear <ihellobear@gmail.com>
+;; Author: hellobear <i@hellobear.net>
 ;; URL: https://github.com/hellobear/nae
 ;; Created: Aug 2013
 ;; Version: 0.0.1
