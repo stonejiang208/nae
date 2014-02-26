@@ -15,7 +15,6 @@
 * codeigniter fill-column
 * web-mode autopair 单引号
 * 每个文件头部的注释
-* flycheck phpcs的配置，目前exec-path是暂时注释掉的
 * 给flycheck的几个函数定义快捷键
 * 80列线
 * linux source code pro字体
@@ -25,3 +24,7 @@
 * 显示当前页面所有函数列表
 * emacs git process显示不正常
 * M-x shell显示不正常
+* 两个frame显示同一个dired buffer时，按^会导致两个dired buffer都会返回上一层
+* recenf-mode
+* nae-undo-kill-buffer不正常
+* Helm Time Zone Home Location的值为Paris，这个值有什么用？
