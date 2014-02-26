@@ -41,6 +41,7 @@
 (global-set-key (kbd "C-.") 'set-mark-command)
 (global-set-key (kbd "M-x") 'smex)
 (global-set-key (kbd "C-x C-b") 'ibuffer)
+;; (global-set-key (kbd "C-x k") 'kill-this-buffer)
 (global-set-key (kbd "C-x o") 'switch-window)
 (global-set-key (kbd "C-x x") 'kill-buffer-and-its-windows)
 (global-set-key (kbd "C-x r l") 'get-bookmarks-in-current-window)
