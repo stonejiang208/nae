@@ -33,6 +33,9 @@
 (nae-require-package 'helm-emmet)
 (require 'helm-config)
 
+;; helm buffer以split的形式显示
+(setq helm-split-window-in-side-p t)
+
 (provide 'nae-helm)
 
 ;;; nae-helm.el ends here
