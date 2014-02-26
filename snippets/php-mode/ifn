@@ -1,8 +1,8 @@
 # -*- mode: snippet -*-
-# name: K&R style else if
-# key: eif
+# name: K&R style if not
+# key: ifn
 # condition: (and (fboundp 'nae-in-php-coding-styles) (nae-in-php-coding-styles '(symfony2)))
 # --
-elseif (${1:condition}) {
+if (!${1:condition}) {
 	$0
 }

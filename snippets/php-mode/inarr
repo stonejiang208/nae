@@ -1,8 +1,6 @@
 # -*- mode: snippet -*-
-# name: K&R style else if
-# key: eif
+# name: in_array
+# key: inarr
 # condition: (and (fboundp 'nae-in-php-coding-styles) (nae-in-php-coding-styles '(symfony2)))
 # --
-elseif (${1:condition}) {
-	$0
-}
+in_array(${1:needle}, array($0))
