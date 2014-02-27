@@ -39,6 +39,7 @@
 
 (require 'nae-dired)
 (require 'nae-ibuffer)
+(require 'nae-recentf)
 (require 'nae-isearch)
 (require 'nae-projectile)
 (require 'nae-flycheck)
