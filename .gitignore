@@ -1,6 +1,4 @@
-ac-comphist.dat
 auto-save-list
-bookmarks
 tramp
 custom.el
 projectile-bookmarks.eld
@@ -9,13 +7,8 @@ frame-restore-parameters
 nae-local.el
 
 .DS_Store
-.emacs.desktop
-.emacs.desktop.lock
-.session
 
 backup/*
 elpa/*
-eshell/*
-url/*
-DouBanMusic/*
+gen/*
 HyperSpec-7-0/*

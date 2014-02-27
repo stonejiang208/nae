@@ -29,6 +29,8 @@
 
 ;;; Code:
 
+(setq eshell-directory-name (expand-file-name "eshell/" nae-gen-dir))
+
 ;; BASH programmable completion
 (require 'bash-completion)
 (bash-completion-setup)

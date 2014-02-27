@@ -28,3 +28,5 @@
 * recenf-mode
 * nae-undo-kill-buffer不正常
 * Helm Time Zone Home Location的值为Paris，这个值有什么用？
+* Ac Dictionary Files，配置自定义词典的位置。
+* 研究emacs-w3m与终端下的w3m是否共用同样的cache等信息。

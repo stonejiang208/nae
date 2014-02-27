@@ -29,10 +29,12 @@
 
 ;;; Code:
 
-(setq desktop-path (list user-emacs-directory))
+(setq desktop-path (list nae-gen-dir))
 (desktop-save-mode 1)
 
 (nae-require-package 'session)
+
+(setq session-save-file (expand-file-name ".session" nae-gen-dir))
 
 (add-hook 'after-init-hook 'session-initialize)
 

@@ -36,6 +36,10 @@
 (defvar nae-modules-dir (expand-file-name  "modules" nae-dir))
 (defvar nae-vendor-dir (expand-file-name  "vendor" nae-dir))
 (defvar nae-custom-dir (expand-file-name "custom" nae-dir))
+(defvar nae-gen-dir (expand-file-name "gen" nae-dir))
+
+(unless (file-exists-p nae-gen-dir)
+  (make-directory nae-gen-dir))
 
 (add-to-list 'load-path nae-dir)
 (add-to-list 'load-path nae-core-dir)

@@ -31,6 +31,8 @@
 
 (nae-require-package 'bookmark+)
 
+(setq bookmark-default-file (expand-file-name "bookmarks" nae-gen-dir))
+
 ;; 更改书签后立即保存
 (setq bookmark-save-flag 1)
 
