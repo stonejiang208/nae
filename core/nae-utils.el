@@ -81,7 +81,10 @@ BUFFER may be either a buffer or its name (a string)."
   (or (buffer-file-name) (error "No file is currently being edited"))
   (when (yes-or-no-p (format "Really delete '%s'?"
                              (file-name-nondirectory buffer-file-name)))
-    (delete-file (buffer-file-name))
+    ;; 当创建了buffer但未保存时，硬盘上尚未创建对应的文件，此时先判断
+    ;; 对应的文件是否存在，存在则删除之，若未存在则直接删除buffer。
+    (when (file-exists-p buffer-file-name)
+      (delete-file (buffer-file-name)))
     (kill-this-buffer)))
 
 ;; 重命名当前文件及buffer
