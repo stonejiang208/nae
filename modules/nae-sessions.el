@@ -29,12 +29,12 @@
 
 ;;; Code:
 
-(setq desktop-path (list nae-gen-dir))
+(setq desktop-path (list nae-savefile-dir))
 (desktop-save-mode 1)
 
 (nae-require-package 'session)
 
-(setq session-save-file (expand-file-name ".session" nae-gen-dir))
+(setq session-save-file (expand-file-name ".session" nae-savefile-dir))
 
 (add-hook 'after-init-hook 'session-initialize)
 

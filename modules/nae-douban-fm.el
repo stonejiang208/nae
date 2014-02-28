@@ -31,7 +31,7 @@
 
 (autoload 'douban-music "douban-music-mode" nil t)
 
-(setq douban-music-cache-directory (expand-file-name "DouBanMusic/" nae-gen-dir))
+(setq douban-music-cache-directory (expand-file-name "DouBanMusic/" nae-savefile-dir))
 
 (provide 'nae-douban-fm)
 

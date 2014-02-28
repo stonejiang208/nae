@@ -31,7 +31,7 @@
 
 (nae-require-package 'w3m)
 
-;; (setq url-cookie-file (expand-file-name "url/cookies/" nae-gen-dir))
+;; (setq url-cookie-file (expand-file-name "url/cookies/" nae-savefile-dir))
 
 ;; 开启按f键显示链接编号的功能
 (w3m-lnum-mode)

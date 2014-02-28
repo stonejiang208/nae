@@ -35,7 +35,7 @@
 
 (ac-config-default)
 
-(setq ac-comphist-file (expand-file-name "ac-comphist.dat" nae-gen-dir))
+(setq ac-comphist-file (expand-file-name "ac-comphist.dat" nae-savefile-dir))
 
 (setq ac-use-quick-help nil)
 ;; 不自动出现补全菜单

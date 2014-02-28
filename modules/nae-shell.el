@@ -29,7 +29,7 @@
 
 ;;; Code:
 
-(setq eshell-directory-name (expand-file-name "eshell/" nae-gen-dir))
+(setq eshell-directory-name (expand-file-name "eshell/" nae-savefile-dir))
 
 ;; BASH programmable completion
 (require 'bash-completion)

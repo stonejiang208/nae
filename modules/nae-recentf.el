@@ -29,7 +29,7 @@
 
 ;;; Code:
 
-(setq recentf-save-file (expand-file-name ".recentf" nae-gen-dir))
+(setq recentf-save-file (expand-file-name ".recentf" nae-savefile-dir))
 
 (provide 'nae-recentf)
 
