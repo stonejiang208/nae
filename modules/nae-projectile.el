@@ -38,6 +38,8 @@
 
 ;; ack
 (nae-require-package 'ack-and-a-half)
+;; 一个hack，若没有以下语句projectile-ack命令会报错
+(require 'ack-and-a-half)
 
 (defalias 'ack 'ack-and-a-half)
 (defalias 'ack-same 'ack-and-a-half-same)
