@@ -33,7 +33,7 @@
 
 (defvar nae-dir user-emacs-directory)
 (defvar nae-core-dir (expand-file-name "core" nae-dir))
-(defvar nae-modules-dir (expand-file-name  "modules" nae-dir))
+(defvar nae-modules-dir (expand-file-name "modules" nae-dir))
 (defvar nae-vendor-dir (expand-file-name  "vendor" nae-dir))
 (defvar nae-custom-dir (expand-file-name "custom" nae-dir))
 (defvar nae-savefile-dir (expand-file-name "savefile" nae-dir))
