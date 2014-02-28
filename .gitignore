@@ -10,5 +10,5 @@ nae-local.el
 
 backup/*
 elpa/*
-gen/*
+savefile/*
 HyperSpec-7-0/*
