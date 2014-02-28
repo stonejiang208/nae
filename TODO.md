@@ -30,3 +30,4 @@
 * Ac Dictionary Files，配置自定义词典的位置。
 * 研究emacs-w3m与终端下的w3m是否共用同样的cache等信息。
 * 在.emacs.d文件夹下新建文件会报错
+* auto-complete-dict暂时没有想到更好的放置地。
