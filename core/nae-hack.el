@@ -35,6 +35,27 @@
 (if (boundp 'ac-dictionary-directories)
     (setq ac-dictionary-directories (append ac-dictionary-directories '("~/.emacs.d/auto-complete-dict"))))
 
+;; 与elpa中的projectile稍有不同
+(defun projectile-replace (arg)
+  "Replace a string in the project using `tags-query-replace'.
+
+With a prefix argument ARG prompts you for a directory on which to run the replacement."
+  (interactive "P")
+  (let* ((old-text (read-string
+                    (projectile-prepend-project-name "Replace: ")
+                    (projectile-symbol-at-point)))
+         (new-text (read-string
+                    (projectile-prepend-project-name
+                     (format "Replace %s with: " old-text))))
+         (directory (if arg
+                        (read-directory-name "Replace in directory: ")
+                      (projectile-project-root)))
+         (files (projectile-files-with-string old-text directory)))
+    (tags-query-replace old-text new-text nil 'files)))
+
+;; 一个hack，若没有以下语句projectile-ack命令会报错
+(require 'ack-and-a-half)
+
 (provide 'nae-hack)
 
 ;;; nae-hack.el ends here

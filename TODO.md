@@ -31,3 +31,4 @@
 * 研究emacs-w3m与终端下的w3m是否共用同样的cache等信息。
 * 在.emacs.d文件夹下新建文件会报错
 * auto-complete-dict暂时没有想到更好的放置地。
+* 现在elpa里的projectile有个typo，源未更新，自己手动改下。
