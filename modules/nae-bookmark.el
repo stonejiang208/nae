@@ -32,6 +32,7 @@
 (nae-require-package 'bookmark+)
 
 (setq bookmark-default-file (expand-file-name "bookmarks" nae-savefile-dir))
+(setq bmkp-bmenu-state-file (expand-file-name ".emacs-bmk-bmenu-state.el" nae-savefile-dir))
 
 ;; 更改书签后立即保存
 (setq bookmark-save-flag 1)
