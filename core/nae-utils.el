@@ -56,24 +56,6 @@ BUFFER may be either a buffer or its name (a string)."
     (when (interactive-p)
       (error "Cannot kill buffer.  Not a live buffer: `%s'" buffer))))
 
-;; @see http://www.emacswiki.org/emacs/RecentFiles
-(defun nae-undo-kill-buffer (arg)
-  "Re-open the last buffer killed.  With ARG, re-open the nth buffer."
-  (interactive "p")
-  (let ((recently-killed-list (copy-sequence recentf-list))
-        (buffer-files-list
-         (delq nil (mapcar (lambda (buf)
-                             (when (buffer-file-name buf)
-                               (expand-file-name (buffer-file-name buf)))) (buffer-list)))))
-    (mapc
-     (lambda (buf-file)
-       (setq recently-killed-list
-             (delq buf-file recently-killed-list)))
-     buffer-files-list)
-    (find-file
-     (if arg (nth arg recently-killed-list)
-       (car recently-killed-list)))))
-
 ;; 删除当前文件及buffer
 (defun delete-this-file ()
   "Delete the current file, and kill the buffer."
@@ -211,6 +193,26 @@ or just one char if that's not possible"
   "Return the base name of the FILENAME: no directory.
 FILENAME defaults to `buffer-file-name'."
    (file-name-nondirectory (or filename (buffer-file-name))))
+
+;; 参见 http://stackoverflow.com/a/2227692
+(defvar nae-closed-files (list))
+
+(defun nae-track-closed-file ()
+  (and buffer-file-name
+       (message buffer-file-name)
+       (or (delete buffer-file-name nae-closed-files) t)
+       ;; 当nae-closed-files元素的数量达到20时，删除列表最后一个元素
+       (progn (when (= (length nae-closed-files) 20)
+         (nbutlast nae-closed-files 1))
+       (add-to-list 'nae-closed-files buffer-file-name))))
+
+(defun nae-last-closed-file ()
+  (interactive)
+  (if nae-closed-files
+      (find-file (pop nae-closed-files))
+    (message "No closed file!")))
+
+(add-hook 'kill-buffer-hook 'nae-track-closed-file)
 
 (provide 'nae-utils)
 
