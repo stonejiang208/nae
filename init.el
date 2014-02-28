@@ -36,7 +36,7 @@
 (defvar nae-modules-dir (expand-file-name  "modules" nae-dir))
 (defvar nae-vendor-dir (expand-file-name  "vendor" nae-dir))
 (defvar nae-custom-dir (expand-file-name "custom" nae-dir))
-(defvar nae-gen-dir (expand-file-name "gen" nae-dir))
+(defvar nae-gen-dir (expand-file-name "savefile" nae-dir))
 
 (unless (file-exists-p nae-gen-dir)
   (make-directory nae-gen-dir))
@@ -63,7 +63,7 @@
   (server-start))
 
 ;; Customize Emacs所自动生成的配置
-(setq custom-file (expand-file-name "custom.el" nae-custom-dir))
+(setq custom-file (expand-file-name "custom.el" nae-gen-dir))
 (when (file-exists-p custom-file)
   (load custom-file))
 
