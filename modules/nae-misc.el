@@ -35,7 +35,7 @@
 ;; 当光标抵达最后一行不增加新行
 (setq next-line-add-newlines nil)
 
-(setq auto-save-list-file-prefix (expand-file-name "~/.emacs.d/gen/auto-save-list/.saves-" nae-gen-dir))
+(setq auto-save-list-file-prefix (expand-file-name "auto-save-list/.saves-" nae-gen-dir))
 
 (provide 'nae-misc)
 
