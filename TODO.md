@@ -14,7 +14,6 @@
 * 默认web-mode
 * codeigniter fill-column
 * web-mode autopair 单引号
-* 每个文件头部的注释
 * 给flycheck的几个函数定义快捷键
 * 80列线
 * linux source code pro字体
@@ -30,3 +29,4 @@
 * Helm Time Zone Home Location的值为Paris，这个值有什么用？
 * Ac Dictionary Files，配置自定义词典的位置。
 * 研究emacs-w3m与终端下的w3m是否共用同样的cache等信息。
+* 在.emacs.d文件夹下新建文件会报错
