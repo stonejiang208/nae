@@ -61,8 +61,12 @@
 (add-to-list 'auto-mode-alist '("\\.zsh\\'" . sh-mode))
 (add-hook 'sh-mode-hook
           (lambda ()
-            (if (string-match "\\.zsh$" buffer-file-name)
-                (sh-set-shell "zsh"))))
+            ;; 如果buffer有关联的文件
+            (if buffer-file-name
+                (if (string-match "\\.zsh$" buffer-file-name)
+                    (sh-set-shell "zsh"))
+              (if (string-match "\\.zsh$" (buffer-name))
+                  (sh-set-shell "zsh")))))
 
 (provide 'nae-shell)
 
