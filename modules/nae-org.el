@@ -65,8 +65,7 @@
 (setq org-html-xml-declaration nil)
 
 (setq org-publish-project-alist
-      '(
-        ("org"
+      '(("org"
          :author "dongxiong"
          :language "zh-CN"
          :base-directory "~/Dropbox/blog/org/"
@@ -93,8 +92,7 @@
          :recursive t
          :publishing-function org-publish-attachment
          )
-        ("blog" :components ("org" "static"))
-        ))
+        ("blog" :components ("org" "static"))))
 
 (provide 'nae-org)
 
