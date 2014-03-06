@@ -93,6 +93,13 @@
          :publishing-directory "~/Dropbox/mysite/gen"
          :recursive t)))
 
+;; make the windmove function active in locations where Org mode does not have special functionality on S-<cursor>
+(when (featurep 'windcycle)
+  (add-hook 'org-shiftup-final-hook 'windmove-up-cycle)
+  (add-hook 'org-shiftleft-final-hook 'windmove-left-cycle)
+  (add-hook 'org-shiftdown-final-hook 'windmove-down-cycle)
+  (add-hook 'org-shiftright-final-hook 'windmove-right-cycle))
+
 (provide 'nae-org)
 
 ;;; nae-org.el ends here
