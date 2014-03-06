@@ -41,11 +41,23 @@
 (unless (file-exists-p nae-savefile-dir)
   (make-directory nae-savefile-dir))
 
+(defun nae-add-subfolders-to-load-path (parent-dir)
+  "Add all level PARENT-DIR subdirs to the `load-path'."
+  (dolist (f (directory-files parent-dir))
+    (let ((name (expand-file-name f parent-dir)))
+      (when (and (file-directory-p name)
+                 (not (equal f ".."))
+                 (not (equal f ".")))
+        (add-to-list 'load-path name)
+        (nae-add-subfolders-to-load-path name)))))
+
 (add-to-list 'load-path nae-dir)
 (add-to-list 'load-path nae-core-dir)
 (add-to-list 'load-path nae-modules-dir)
 (add-to-list 'load-path nae-vendor-dir)
 (add-to-list 'load-path nae-custom-dir)
+
+(nae-add-subfolders-to-load-path nae-modules-dir)
 
 (defconst *is-a-mac* (eq system-type 'darwin))
 (defconst *is-gui* (if window-system t nil))

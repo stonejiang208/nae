@@ -58,6 +58,15 @@
 ;; (define-key ac-completing-map "\r" 'ac-complete)
 ;; (define-key ac-completing-map [return] 'ac-complete)
 
+;; @HACK
+;; @TODO "auto-complete/dict"使用变量替代
+;; 设置auto-complete的dict在原来的基础上加上auto-complete-dict
+;; 其中存有一份dict/javascript-mode的拷贝，命名为js-mode
+;; 解决auto-complete在js文件下无效
+(if (boundp 'ac-dictionary-directories)
+    (add-to-list 'ac-dictionary-directories
+                 (expand-file-name "auto-complete/dict" nae-modules-dir)))
+
 (provide 'nae-auto-complete)
 
 ;;; nae-auto-complete.el ends here

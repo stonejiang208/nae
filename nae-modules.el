@@ -81,8 +81,6 @@
 
 (require 'nae-key-bindings)
 
-(require 'nae-hack)
-
 (require 'nae-locales)
 
 ;;; nae-modules.el ends here
