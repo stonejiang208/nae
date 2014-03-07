@@ -38,7 +38,9 @@
 (global-set-key (kbd "C-c a") 'org-agenda)
 (global-set-key (kbd "C-c g") 'magit-status)
 (global-set-key (kbd "C-c h") 'helm-mini)
-(global-set-key (kbd "C-m") 'set-mark-command)
+;; 将C-m绑定到set-mark-command
+(define-key input-decode-map (kbd "C-m") (kbd "H-m"))
+(global-set-key (kbd "H-m") 'set-mark-command)
 (global-set-key (kbd "M-x") 'smex)
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 (global-set-key (kbd "C-x k") 'kill-this-buffer)
