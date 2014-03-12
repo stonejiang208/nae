@@ -48,6 +48,9 @@
 (nae-require-package 'undo-tree)
 (global-undo-tree-mode 1)
 
+(global-set-key (kbd "C-/") 'undo-tree-undo)
+(global-set-key (kbd "M-/") 'undo-tree-redo)
+
 ;; 只在替换时大小写敏感
 (defadvice replace-string (around turn-off-case-fold-search)
   (let ((case-fold-search nil))
