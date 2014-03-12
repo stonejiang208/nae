@@ -29,11 +29,12 @@
 
 ;;; Code:
 
-(nae-require-package 'color-theme-sanityinc-solarized)
-(nae-require-package 'monokai-theme)
+;; (nae-require-package 'color-theme-sanityinc-solarized)
+;; (nae-require-package 'monokai-theme)
+(nae-require-package 'zenburn-theme)
 
 ;; 默认主题 （monokai、sanityinc-inc-solarized-light、sanityinc-solarized-dark）
-(setq-default custom-enabled-themes '(monokai))
+(setq-default custom-enabled-themes '(zenburn))
 
 ;; 确保主题在没有配置主题的情况下也能启用
 (defun reapply-themes ()
