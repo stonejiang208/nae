@@ -48,8 +48,12 @@
 (nae-require-package 'undo-tree)
 (global-undo-tree-mode 1)
 
+;; 为撤销和重做绑定快捷键
 (global-set-key (kbd "C-/") 'undo-tree-undo)
 (global-set-key (kbd "M-/") 'undo-tree-redo)
+
+(defalias 'undo 'undo-tree-undo)
+(defalias 'redo 'undo-tree-redo)
 
 ;; 只在替换时大小写敏感
 (defadvice replace-string (around turn-off-case-fold-search)
