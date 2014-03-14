@@ -90,6 +90,8 @@ function(c){return String.fromCharCode((c<=\"Z\"?90:122)>=(c=c.charCodeAt(0)+13)
 (setq org-publish-sitemap-sort-files 'anti-chronologically)
 (setq org-html-head-include-default-style nil)
 (setq org-html-head-include-scripts nil)
+(setq org-html-htmlize-output-type 'css)
+(setq org-html-htmlize-font-prefix "org-")
 
 ;; 生成的html不附上xml声明
 (setq org-html-xml-declaration nil)
@@ -105,8 +107,8 @@ function(c){return String.fromCharCode((c<=\"Z\"?90:122)>=(c=c.charCodeAt(0)+13)
          :sitemap-title "HB's Blog"
          :sitemap-file-entry-format "%d » [%t]"
          :publishing-function org-html-publish-to-html
-         :publishing-directory "~/Dropbox/mysite/gen/blog"
-         :htmlized-source t
+         :publishing-directory "/var/www/gen/blog"
+         :htmlized-source nil
          :recursive t
          :headline-levels 4
          :html-link-up "/"
@@ -117,7 +119,7 @@ function(c){return String.fromCharCode((c<=\"Z\"?90:122)>=(c=c.charCodeAt(0)+13)
         ("c-standard"
          :base-directory "~/Dropbox/mysite/c-standard"
          :publishing-function org-html-publish-to-html
-         :publishing-directory "~/Dropbox/mysite/c-standard-gen"
+         :publishing-directory "/var/www/c-standard-gen"
          :html-link-up "index.html"
          :html-link-home "/"
          :section-numbers nil)
@@ -125,7 +127,7 @@ function(c){return String.fromCharCode((c<=\"Z\"?90:122)>=(c=c.charCodeAt(0)+13)
          :base-directory "~/Dropbox/mysite/web"
          :base-extension "css\\|js\\|png\\|jpg\\|gif\\|ico\\|pdf\\|mp3\\|ogg\\|swf\\|html"
          :publishing-function org-publish-attachment
-         :publishing-directory "~/Dropbox/mysite/gen"
+         :publishing-directory "/var/www/gen"
          :recursive t)))
 
 ;; Make the windmove function active in locations where Org mode does not have special functionality on S-<cursor>
