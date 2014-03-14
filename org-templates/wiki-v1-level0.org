@@ -1,0 +1,2 @@
+#+OPTIONS: html-postamble:t html-preamble:t
+#+LINK_UP: index.html

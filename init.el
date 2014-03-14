@@ -67,6 +67,10 @@
 
 (require 'nae-packages)
 
+;; username和email
+(setq user-full-name "hellobear")
+(setq user-mail-address "i@hellobear.net")
+
 (load "nae-modules")
 
 ;; 开启server
