@@ -64,7 +64,6 @@
 (require 'nae-c)
 (require 'nae-php)
 (require 'nae-org)
-;; 安装不了，新建el文件会提示文件不存在好像也是这个文件的问题。
 (require 'nae-slime)
 (require 'nae-emmet)
 (require 'nae-vimrc-mode)
