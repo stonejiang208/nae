@@ -106,7 +106,7 @@ function(c){return String.fromCharCode((c<=\"Z\"?90:122)>=(c=c.charCodeAt(0)+13)
          :headline-levels 4
          :html-link-up "../"
          :html-link-home "/"
-         :html-head "<meta http-equiv=\"pragma\" content=\"no-cache\" />\n<link rel=\"stylesheet\" type=\"text/css\" href=\"/css/solarized-light.css\" />"
+         :html-head "<meta http-equiv=\"pragma\" content=\"no-cache\" />\n<link rel=\"stylesheet\" type=\"text/css\" href=\"/css/solarized-light.css\" />")
         ("wiki"
          :base-directory "~/Dropbox/mysite/web/wiki"
          :base-extension "org"
@@ -118,8 +118,7 @@ function(c){return String.fromCharCode((c<=\"Z\"?90:122)>=(c=c.charCodeAt(0)+13)
          :htmlized-source nil
          :html-link-up "/"
          :html-link-home "/"
-         :html-head "<meta http-equiv=\"pragma\" content=\"no-cache\" />\n<link rel=\"stylesheet\" type=\"text/css\" href=\"/css/wiki.css\" />"
-         )
+         :html-head "<meta http-equiv=\"pragma\" content=\"no-cache\" />\n<link rel=\"stylesheet\" type=\"text/css\" href=\"/css/wiki.css\" />")
         ("c-standard"
          :base-directory "~/Dropbox/mysite/c-standard"
          :publishing-function org-html-publish-to-html
