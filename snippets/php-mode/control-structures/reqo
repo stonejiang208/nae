@@ -1,5 +1,6 @@
 # -*- mode: snippet -*-
 # name: require_once
 # key: reqo
+# group: Control Structures
 # --
 require_once $0;

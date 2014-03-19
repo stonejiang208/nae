@@ -1,5 +1,0 @@
-# -*- mode: snippet -*-
-# name: load view
-# key: lv
-# --
-$this->view->render(${1:file_name}${2:, ${3:$data}});

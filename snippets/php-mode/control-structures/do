@@ -2,6 +2,7 @@
 # name: Allman style do
 # key: do
 # condition: (and (fboundp 'nae-in-php-coding-styles) (nae-in-php-coding-styles '(codeigniter)))
+# group: Control Structures
 # --
 do
 {

@@ -30,11 +30,15 @@
 ;;; Code:
 
 (nae-require-package 'php-mode)
+(nae-require-package 'php-auto-yasnippets)
+
+;; @TODO 判断yasnippet是否加载
+(define-key php-mode-map (kbd "C-c C-y") 'yas/create-php-snippet)
 
 ;; 提供选择的coding style：codeigniter、drupal、pear、symfony2、wordpress
 (setq nae-php-mode-coding-style 'symfony2)
 
-;; 当前php coding style是否在列表实参中
+;; 当前php mode coding style是否在列表实参中
 (defun nae-in-php-coding-styles (styles)
   (and (boundp 'nae-php-mode-coding-style)
        (memq nae-php-mode-coding-style styles)))
@@ -43,8 +47,7 @@
 (c-add-style
  "codeigniter"
  '((c-basic-offset . 4)
-   (c-offsets-alist . (
-					   (topmost-intro-cont . (first c-lineup-cascaded-calls
+   (c-offsets-alist . ((topmost-intro-cont . (first c-lineup-cascaded-calls
                                                     php-lineup-arglist-intro))
 					   (substatement-open . 0)
 					   (case-label . +)

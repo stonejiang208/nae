@@ -1,9 +1,14 @@
 # -*- mode: snippet -*-
-# name: Allman style if
-# key: if
+# name: Allman style try
+# key: try
 # condition: (and (fboundp 'nae-in-php-coding-styles) (nae-in-php-coding-styles '(codeigniter)))
+# group: Control Structures
 # --
-if (${1:condition})
+try
+{
+	$1
+}
+catch (${2:Exception} ${3:$e})
 {
 	$0
 }

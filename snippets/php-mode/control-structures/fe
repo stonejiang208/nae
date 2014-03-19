@@ -1,11 +1,10 @@
 # -*- mode: snippet -*-
-# name: Allman style switch
-# key: sw
+# name: Allman style foreach
+# key: fe
 # condition: (and (fboundp 'nae-in-php-coding-styles) (nae-in-php-coding-styles '(codeigniter)))
+# group: Control Structures
 # --
-switch (${1:true})
+foreach (${1:$iterator} as ${2:$key => $value})
 {
-	case $2:
-		$0
-	default:
+	$0
 }

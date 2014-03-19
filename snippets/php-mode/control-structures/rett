@@ -2,5 +2,6 @@
 # name: return true
 # key: rett
 # condition: (and (fboundp 'nae-in-php-coding-styles) (nae-in-php-coding-styles '(symfony2)))
+# group: Control Structures
 # --
 return true;

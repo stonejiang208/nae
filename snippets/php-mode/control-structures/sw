@@ -1,9 +1,12 @@
 # -*- mode: snippet -*-
-# name: Allman style while
-# key: wh
+# name: Allman style switch
+# key: sw
 # condition: (and (fboundp 'nae-in-php-coding-styles) (nae-in-php-coding-styles '(codeigniter)))
+# group: Control Structures
 # --
-while (${1:condition})
+switch (${1:true})
 {
-	$0
+	case $2:
+		$0
+	default:
 }

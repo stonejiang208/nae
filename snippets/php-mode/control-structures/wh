@@ -1,13 +1,10 @@
 # -*- mode: snippet -*-
-# name: Allman style try
-# key: try
+# name: Allman style while
+# key: wh
 # condition: (and (fboundp 'nae-in-php-coding-styles) (nae-in-php-coding-styles '(codeigniter)))
+# group: Control Structures
 # --
-try
-{
-	$1
-}
-catch (${2:Exception} ${3:$e})
+while (${1:condition})
 {
 	$0
 }
