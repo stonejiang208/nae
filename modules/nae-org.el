@@ -77,23 +77,10 @@ function(c){return String.fromCharCode((c<=\"Z\"?90:122)>=(c=c.charCodeAt(0)+13)
     <a href=\"http://disqus.com\" class=\"dsq-brlink\">comments powered by <span class=\"logo-disqus\">Disqus</span></a>
 ")))
 
- ;; <div id=\"disqus_thread\"></div>
- ;;    <script type=\"text/javascript\">
- ;;        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
- ;;        var disqus_shortname = 'hellobear'; // required: replace example with your forum shortname
-
- ;;        /* * * DON'T EDIT BELOW THIS LINE * * */
- ;;        (function() {
- ;;            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
- ;;            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
- ;;            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
- ;;        })();
- ;;    </script>
- ;;    <noscript>Please enable JavaScript to view the <a href=\"http://disqus.com/?ref_noscript\">comments powered by Disqus.</a></noscript>
- ;;    <a href=\"http://disqus.com\" class=\"dsq-brlink\">comments powered by <span class=\"logo-disqus\">Disqus</span></a>
-
+;; 默认不显示preamble和postamble
 (setq org-html-preamble nil)
 (setq org-html-postamble nil)
+
 (setq org-src-fontify-natively t)
 (setq org-publish-sitemap-sort-files 'anti-chronologically)
 (setq org-html-head-include-default-style nil)
@@ -109,7 +96,7 @@ function(c){return String.fromCharCode((c<=\"Z\"?90:122)>=(c=c.charCodeAt(0)+13)
          :base-directory "~/Dropbox/mysite/web/blog"
          :base-extension "org"
          :auto-sitemap t
-         :sitemap-filename "index.org"
+         :sitemap-filename "gen-sitemap.org"
          :sitemap-title "HB's Blog"
          :sitemap-file-entry-format "%d » [%t]"
          :publishing-function org-html-publish-to-html
@@ -120,7 +107,6 @@ function(c){return String.fromCharCode((c<=\"Z\"?90:122)>=(c=c.charCodeAt(0)+13)
          :html-link-up "../"
          :html-link-home "/"
          :html-head "<meta http-equiv=\"pragma\" content=\"no-cache\" />\n<link rel=\"stylesheet\" type=\"text/css\" href=\"/css/solarized-light.css\" />"
-         :html-head-extra "<link rel=\"stylesheet\" type=\"text/css\" href=\"/css/misc.css\" />")
         ("wiki"
          :base-directory "~/Dropbox/mysite/web/wiki"
          :base-extension "org"
