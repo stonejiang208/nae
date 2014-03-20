@@ -91,46 +91,49 @@ function(c){return String.fromCharCode((c<=\"Z\"?90:122)>=(c=c.charCodeAt(0)+13)
 ;; 生成的html不附上xml声明
 (setq org-html-xml-declaration nil)
 
+(setq hb-org-publish-to-html-common-alist
+      '(:base-extension "org"
+        :exclude "^excluded-"
+        :recursive t
+        :publishing-function org-html-publish-to-html
+        :headline-levels 4
+        :html-link-up "../"
+        :html-link-home "/"
+        :auto-sitemap t
+        :sitemap-filename "index.org"
+        :sitemap-file-entry-format "%d » [%t]"))
+
 (setq org-publish-project-alist
-      '(("blog"
-         :base-directory "~/Dropbox/mysite/web/blog"
-         :base-extension "org"
-         :auto-sitemap t
-         :sitemap-filename "gen-sitemap.org"
-         :sitemap-title "HB's Blog"
-         :sitemap-file-entry-format "%d » [%t]"
-         :publishing-function org-html-publish-to-html
-         :publishing-directory "~/Dropbox/mysite/gen/blog"
-         :htmlized-source nil
-         :recursive t
-         :headline-levels 4
-         :html-link-up "../"
-         :html-link-home "/"
-         :html-head "<meta http-equiv=\"pragma\" content=\"no-cache\" />\n<link rel=\"stylesheet\" type=\"text/css\" href=\"/css/solarized-light.css\" />")
-        ("wiki"
-         :base-directory "~/Dropbox/mysite/web/wiki"
-         :base-extension "org"
-         :auto-sitemap t
-         :sitemap-filename "index.org"
-         :sitemap-title "HB's Personal Wiki"
-         :publishing-function org-html-publish-to-html
-         :publishing-directory "~/Dropbox/mysite/gen/wiki"
-         :htmlized-source nil
-         :html-link-up "/"
-         :html-link-home "/"
-         :html-head "<meta http-equiv=\"pragma\" content=\"no-cache\" />\n<link rel=\"stylesheet\" type=\"text/css\" href=\"/css/wiki.css\" />")
-        ("c-standard"
-         :base-directory "~/Dropbox/mysite/c-standard"
-         :publishing-function org-html-publish-to-html
-         :publishing-directory "~/Dropbox/mysite/c-standard-gen"
-         :html-link-up "index.html"
-         :html-link-home "/"
-         :section-numbers nil)
+      `((,@(append '("blog"
+                     :base-directory "~/Dropbox/mysite/web/blog"
+                     :publishing-directory "~/Dropbox/mysite/gen/blog"
+                     :html-head "<link rel=\"stylesheet\" type=\"text/css\" href=\"../css/solarized-light.css\" />"
+                     :sitemap-title "HB's Blog")
+                   hb-org-publish-to-html-common-alist))
+        (,@(append '("articles"
+                     :base-directory "~/Dropbox/mysite/web/articles"
+                     :publishing-directory "~/Dropbox/mysite/gen/articles"
+                     :html-head "<link rel=\"stylesheet\" type=\"text/css\" href=\"../css/solarized-dark.css\" />"
+                     :sitemap-title "HB's Articles")
+                   hb-org-publish-to-html-common-alist))
+        (,@(append '("translations"
+                     :base-directory "~/Dropbox/mysite/web/translations"
+                     :publishing-directory "~/Dropbox/mysite/gen/translations"
+                     :html-head "<link rel=\"stylesheet\" type=\"text/css\" href=\"../css/general.css\" />"
+                     :sitemap-title "HB's Translations")
+                   hb-org-publish-to-html-common-alist))
+        (,@(append '("wiki"
+                     :base-directory "~/Dropbox/mysite/web/wiki"
+                     :publishing-directory "~/Dropbox/mysite/gen/wiki"
+                     :html-head "<link rel=\"stylesheet\" type=\"text/css\" href=\"../css/general.css\" />"
+                     :sitemap-title "HB's Wiki"
+                     :sitemap-file-entry-format "%t")
+                   hb-org-publish-to-html-common-alist))
         ("static"
          :base-directory "~/Dropbox/mysite/web"
          :base-extension "css\\|js\\|png\\|jpg\\|gif\\|ico\\|pdf\\|mp3\\|ogg\\|swf\\|html"
-         :publishing-function org-publish-attachment
          :publishing-directory "~/Dropbox/mysite/gen"
+         :publishing-function org-publish-attachment
          :recursive t)))
 
 ;; Make the windmove function active in locations where Org mode does not have special functionality on S-<cursor>
