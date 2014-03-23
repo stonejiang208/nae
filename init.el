@@ -58,6 +58,7 @@
 (add-to-list 'load-path nae-personal-dir)
 
 (nae-add-subfolders-to-load-path nae-modules-dir)
+(nae-add-subfolders-to-load-path nae-personal-dir)
 
 (defconst *is-a-mac* (eq system-type 'darwin))
 (defconst *is-gui* (if window-system t nil))
