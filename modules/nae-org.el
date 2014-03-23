@@ -99,6 +99,7 @@ function(c){return String.fromCharCode((c<=\"Z\"?90:122)>=(c=c.charCodeAt(0)+13)
         :headline-levels 4
         :html-link-up "../"
         :html-link-home "/"
+        :with-toc nil
         :auto-sitemap t
         :sitemap-filename "index.org"
         :sitemap-file-entry-format "%d » [%t]"))
@@ -126,7 +127,7 @@ function(c){return String.fromCharCode((c<=\"Z\"?90:122)>=(c=c.charCodeAt(0)+13)
                      :base-directory "~/Dropbox/mysite/web/wiki"
                      :publishing-directory "~/Dropbox/mysite/gen/wiki"
                      :html-head "<link rel=\"stylesheet\" type=\"text/css\" href=\"../css/general.css\" />"
-                     :sitemap-title "HB's Wiki"
+                     :sitemap-title "个人维基"
                      :sitemap-file-entry-format "%t")
                    hb-org-publish-to-html-common-alist))
         ("static"
