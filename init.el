@@ -35,7 +35,7 @@
 (defvar nae-core-dir (expand-file-name "core" nae-dir))
 (defvar nae-modules-dir (expand-file-name "modules" nae-dir))
 (defvar nae-vendor-dir (expand-file-name  "vendor" nae-dir))
-(defvar nae-custom-dir (expand-file-name "custom" nae-dir))
+(defvar nae-personal-dir (expand-file-name "personal" nae-dir))
 (defvar nae-savefile-dir (expand-file-name "savefile" nae-dir))
 
 (unless (file-exists-p nae-savefile-dir)
@@ -55,7 +55,7 @@
 (add-to-list 'load-path nae-core-dir)
 (add-to-list 'load-path nae-modules-dir)
 (add-to-list 'load-path nae-vendor-dir)
-(add-to-list 'load-path nae-custom-dir)
+(add-to-list 'load-path nae-personal-dir)
 
 (nae-add-subfolders-to-load-path nae-modules-dir)
 
