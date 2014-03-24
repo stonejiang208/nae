@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: return false
+# key: retf
+# --
+return false;

@@ -2,4 +2,5 @@
 # name: var_dump then die
 # key: vdd
 # --
-var_dump($0); die();
+var_dump($0);
+die();
