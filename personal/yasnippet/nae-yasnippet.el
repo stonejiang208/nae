@@ -32,7 +32,7 @@
 (nae-require-package 'yasnippet)
 
 ;; 设置snippets存放的目录
-(setq yas-snippet-dirs '("~/.emacs.d/snippets"))
+(setq yas-snippet-dirs (expand-file-name "yasnippet/snippets" nae-personal-dir))
 ;; 位于setq yas-snippet-dirs之后，避免加载elpa里面的snippets
 (yas-global-mode 1)
 
