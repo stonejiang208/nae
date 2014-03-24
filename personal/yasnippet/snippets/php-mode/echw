@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: echo 'Hello world!'
+# key: echw
+# --
+echo 'Hello world!';

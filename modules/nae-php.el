@@ -84,13 +84,21 @@ working with CodeIgniter."
 		c-indent-comments-syntactically-p t)
   (c-set-style "codeigniter"))
 
+;; @TODO php-boris-command配置移到别处去
+(nae-require-package 'php-boris)
+(setq php-boris-command "/opt/boris/bin/boris")
+
+;; a minor mode to evaluate PHP code in the Boris repl
+(nae-require-package 'php-boris-minor-mode)
+
 ;; 更改php注释类型
 (add-hook 'php-mode-hook
           (lambda ()
             (nae-php-enable-coding-style nae-php-mode-coding-style)
             (setq php-manual-path "~/.emacs.d/php-manual/")
             ;; 避免与global-set-key的冲突
-            (local-unset-key (kbd "C-."))))
+            (local-unset-key (kbd "C-."))
+            (php-boris-minor-mode)))
 
 (provide 'nae-php)
 
